@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
-import { KnightComponent } from './knight/knight.component';
-import { SquareComponent } from './square/square.component';
-import { BoardComponent } from './board/board.component';
-import { ContainerComponent } from './container/container.component';
+import { KnightComponent } from './layout/knight/knight.component';
+import { SquareComponent } from './layout/square/square.component';
+import { BoardComponent } from './layout/board/board.component';
+import { ContainerComponent } from './layout/container/container.component';
 
 import { default as HTML5Backend } from 'react-dnd-html5-backend'
 
 import { RouterModule } from '@angular/router';
 import { SkyhookDndModule } from '@angular-skyhook/core';
 import { GameService } from './game.service';
-import { BoardSquareComponent } from './board-square/board-square.component';
+import { BoardSquareComponent } from './layout/board-square/board-square.component';
 
 // import { ItemTypes } from './constants';
 // import { Coord } from './coord';
