@@ -1,14 +1,14 @@
-    <div class="board">
-       <!-- can't do an if and a for in same div element, so ng-container is used to fo the if here and not have to add an extraneous div -->
-        <ng-container *ngIf="knightPosition$|async as kp">
-            <div class="square-container" *ngFor="let i of sixtyFour">
-              <app-square *ngIf="xy(i) as pos" [black]="isBlack(pos)"  (click)="handleSquareClick(pos)">
-                  <app-knight *ngIf="pos.x === kp.x && pos.y === kp.y"></app-knight>
-              </app-square>
+<div class="board">
+   <!-- can't do an if and a for in same div element, so ng-container is used to fo the if here and not have to add an extraneous div -->
+    <ng-container *ngIf="knightPosition$|async as kp">
+        <div class="square-container" *ngFor="let i of sixtyFour">
+          <app-square *ngIf="xy(i) as pos" [black]="isBlack(pos)"  (click)="handleSquareClick(pos)">
+              <app-knight *ngIf="pos.x === kp.x && pos.y === kp.y"></app-knight>
+          </app-square>
 
-<!--                <app-board-square *ngIf="xy(i) as pos" [position]="pos">-->
-<!--                    <app-knight *ngIf="pos.x === kp.x && pos.y === kp.y"></app-knight>-->
-<!--                </app-board-square>-->
-            </div>
-        </ng-container>
-    </div>
+<!--            <app-board-square *ngIf="xy(i) as pos" [position]="pos">-->
+<!--                <app-knight *ngIf="pos.x === kp.x && pos.y === kp.y"></app-knight>-->
+<!--            </app-board-square>-->
+        </div>
+    </ng-container>
+</div>

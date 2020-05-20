@@ -5,7 +5,7 @@ import { ItemTypes } from '../../core/model/constants';
 @Component({
   selector: 'app-knight',
  // template: `<span>♘</span>`,
-    template: `<span [dragSource]="knightSource" [class.dragging]="isDragging$|async">♘</span>`,
+  template: `<span [dragSource]="knightSource" [class.dragging]="isDragging$|async">♘</span>`,
  // providers: [ SkyhookDndService],
   styles: [`
     span {
@@ -20,18 +20,14 @@ import { ItemTypes } from '../../core/model/constants';
     }
     `]
 })
-
 export class KnightComponent implements OnInit {
 
-
-       // step 2
+    // step 2
     knightSource = this.dnd.dragSource(ItemTypes.KNIGHT, {
         beginDrag: () => ({})
     });
 
-
-    // component
-    // (this is an Observable<boolean>)
+    // component (this is an Observable<boolean>)
     isDragging$ = this.knightSource.listen(monitor =>  monitor.isDragging());
 
   // step 1
@@ -42,7 +38,7 @@ export class KnightComponent implements OnInit {
         this.knightSource.unsubscribe();
     }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
 
 }

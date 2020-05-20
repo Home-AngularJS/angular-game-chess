@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Coord} from '../../core/model/coord';
-import {GameService} from '../../core/service/game.service';
+import { Coord } from '../../core/model/coord';
+import { GameService } from '../../core/service/game.service';
 
 @Component({
   selector: 'app-board',
@@ -15,7 +15,6 @@ export class BoardComponent implements OnInit {
 
   knightPosition$ = this.gameService.knightPosition$;
 
-
   constructor(private gameService : GameService) {
       console.log("in board constructor");
   }
@@ -27,7 +26,6 @@ export class BoardComponent implements OnInit {
       this.gameService.moveKnight(pos);
   }
 
-
   xy(i): Coord {
         console.log("in xy()");
         return {
@@ -35,8 +33,6 @@ export class BoardComponent implements OnInit {
             y: Math.floor(i / 8)
         }
       }
-
-
 
    isBlack({ x, y }: Coord) {
       //return true;

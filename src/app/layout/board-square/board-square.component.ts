@@ -31,9 +31,9 @@ export class BoardSquareComponent {
 
     // step 2
     target = this.dnd.dropTarget(ItemTypes.KNIGHT, {
-    drop: monitor => {
-        this.game.moveKnight(this.position);
-    }
+      drop: monitor => {
+          this.game.moveKnight(this.position);
+      }
     });
 
     // step 1
