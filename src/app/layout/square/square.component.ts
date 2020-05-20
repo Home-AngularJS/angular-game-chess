@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {Coord} from '../../core/model/coord';
 
 @Component({
   selector: 'app-square',
@@ -20,7 +19,4 @@ export class SquareComponent implements OnInit {
           ? { backgroundColor: 'black', color: 'white' }
           : { backgroundColor: 'white', color: 'black' }
   }
-
-
-
 }

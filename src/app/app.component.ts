@@ -4,10 +4,10 @@ import { Component } from '@angular/core';
 // https://github.com/cormacrelf/angular-skyhook/tree/chessboard-1/packages/examples/src/app/chessboard
 
 @Component({
-  selector: 'my-app',
+  selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
-  name = 'Chess';
+  name = 'Chess Game';
 }
