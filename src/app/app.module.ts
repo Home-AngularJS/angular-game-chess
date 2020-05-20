@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
-import { KnightComponentComponent } from './knight-component/knight-component.component';
+import { KnightComponent } from './knight/knight.component';
 import { SquareComponent } from './square/square.component';
 import { BoardComponent } from './board/board.component';
 import { ContainerComponent } from './container/container.component';
@@ -24,7 +24,7 @@ import { BoardSquareComponent } from './board-square/board-square.component';
    RouterModule.forChild([{ path: '', component: ContainerComponent }]),
     SkyhookDndModule.forRoot({ backend: HTML5Backend }) // must for singleton
     ],
-  declarations: [ AppComponent, HelloComponent, KnightComponentComponent, SquareComponent, BoardComponent, ContainerComponent, BoardSquareComponent ],
+  declarations: [ AppComponent, HelloComponent, KnightComponent, SquareComponent, BoardComponent, ContainerComponent, BoardSquareComponent ],
   bootstrap:    [ AppComponent ],
   providers: [GameService]
 })

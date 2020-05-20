@@ -21,7 +21,7 @@ import { ItemTypes } from '../constants';
     `]
 })
 
-export class KnightComponentComponent implements OnInit {
+export class KnightComponent implements OnInit {
 
 
        // step 2
@@ -33,10 +33,10 @@ export class KnightComponentComponent implements OnInit {
     // component
     // (this is an Observable<boolean>)
     isDragging$ = this.knightSource.listen(monitor =>  monitor.isDragging());
-        
+
   // step 1
     constructor(private dnd: SkyhookDndService) { }
-   
+
    // step 4
     ngOnDestroy() {
         this.knightSource.unsubscribe();
