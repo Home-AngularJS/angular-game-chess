@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { HelloComponent } from './hello.component';
 import { KnightComponent } from './layout/knight/knight.component';
 import { SquareComponent } from './layout/square/square.component';
 import { BoardComponent } from './layout/board/board.component';
@@ -24,7 +23,7 @@ import { BoardSquareComponent } from './layout/board-square/board-square.compone
    RouterModule.forChild([{ path: '', component: ContainerComponent }]),
     SkyhookDndModule.forRoot({ backend: HTML5Backend }) // must for singleton
     ],
-  declarations: [ AppComponent, HelloComponent, KnightComponent, SquareComponent, BoardComponent, ContainerComponent, BoardSquareComponent ],
+  declarations: [ AppComponent, KnightComponent, SquareComponent, BoardComponent, ContainerComponent, BoardSquareComponent ],
   bootstrap:    [ AppComponent ],
   providers: [GameService]
 })

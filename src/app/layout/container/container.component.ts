@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-    selector: 'app-chess-container',
+    selector: 'app-container',
     template: `
     <div class="container">
         <app-board></app-board>
