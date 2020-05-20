@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { Coord } from './coord';
+import { Coord } from '../model/coord';
 
 @Injectable()
 export class GameService {

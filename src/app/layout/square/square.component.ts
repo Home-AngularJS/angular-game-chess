@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {Coord} from '../../coord';
+import {Coord} from '../../core/model/coord';
 
 @Component({
   selector: 'app-square',

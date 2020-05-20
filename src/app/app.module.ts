@@ -13,7 +13,7 @@ import { default as HTML5Backend } from 'react-dnd-html5-backend'
 
 import { RouterModule } from '@angular/router';
 import { SkyhookDndModule } from '@angular-skyhook/core';
-import { GameService } from './game.service';
+import { GameService } from './core/service/game.service';
 import { BoardSquareComponent } from './layout/board-square/board-square.component';
 
 // import { ItemTypes } from './constants';
