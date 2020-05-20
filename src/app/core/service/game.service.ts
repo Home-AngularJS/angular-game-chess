@@ -5,7 +5,7 @@ import { Coord } from '../model/coord';
 @Injectable()
 export class GameService {
 
-    knightPosition$ = new BehaviorSubject<Coord>({ x: 2, y: 5 });
+    knightPosition$ = new BehaviorSubject<Coord>({ x: 0, y: 0 });
 
     moveKnight(to: Coord) {
         this.knightPosition$.next(to);
