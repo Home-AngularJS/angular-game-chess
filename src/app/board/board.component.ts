@@ -3,11 +3,11 @@ import {Coord} from '../coord';
 import {GameService} from '../game.service';
 
 @Component({
-  selector: 'app-board-component',
-  templateUrl: './board-component.component.html',
-  styleUrls: ['./board-component.component.css']
+  selector: 'app-board',
+  templateUrl: './board.component.html',
+  styleUrls: ['./board.component.css']
 })
-export class BoardComponentComponent implements OnInit {
+export class BoardComponent implements OnInit {
   // not sure what the map is doing here in original code seems superflous since we're newing one up anyway???
   // nope he is filling the sixty-four with 0 through 63 so he can do math on it later.
   sixtyFour = new Array(64).fill(0).map((_, i) => i);
@@ -36,7 +36,7 @@ export class BoardComponentComponent implements OnInit {
         }
       }
 
-    
+
 
    isBlack({ x, y }: Coord) {
       //return true;

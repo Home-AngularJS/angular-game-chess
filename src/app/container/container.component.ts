@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
     selector: 'app-chess-container',
     template: `
     <div class="container">
-        <app-board-component></app-board-component>
+        <app-board></app-board>
     </div>
     `, styles: [`
     .container { 

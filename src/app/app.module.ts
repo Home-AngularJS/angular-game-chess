@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { KnightComponentComponent } from './knight-component/knight-component.component';
 import { SquareComponentComponent } from './square-component/square-component.component';
-import { BoardComponentComponent } from './board-component/board-component.component';
+import { BoardComponent } from './board/board.component';
 import { ContainerComponent } from './container/container.component';
 
 import { default as HTML5Backend } from 'react-dnd-html5-backend'
@@ -20,21 +20,21 @@ import { BoardSquareComponent } from './board-square-component/board-square-comp
 // import { Coord } from './coord';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule,    
+  imports:      [ BrowserModule, FormsModule,
    RouterModule.forChild([{ path: '', component: ContainerComponent }]),
     SkyhookDndModule.forRoot({ backend: HTML5Backend }) // must for singleton
     ],
-  declarations: [ AppComponent, HelloComponent, KnightComponentComponent, SquareComponentComponent, BoardComponentComponent, ContainerComponent, BoardSquareComponent ],
+  declarations: [ AppComponent, HelloComponent, KnightComponentComponent, SquareComponentComponent, BoardComponent, ContainerComponent, BoardSquareComponent ],
   bootstrap:    [ AppComponent ],
   providers: [GameService]
 })
-export class AppModule { 
+export class AppModule {
   // This guy ensures one and only one Global injection across the app
  /* static forRoot(): ModuleWithProviders {
     return {
       ngModule: GlobalsModule,
       providers: [ Globals ]                       //<<<====here is the one and only provider
-    }; 
+    };
   }
   */
 
