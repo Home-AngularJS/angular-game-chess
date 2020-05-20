@@ -5,8 +5,8 @@ import { ItemTypes } from '../../core/model/constants';
 @Component({
   selector: 'app-knight',
  // template: `<span>♘</span>`,
-  template: `<span [dragSource]="knightSource" [class.dragging]="isDragging$|async">♘</span>`,
- // providers: [ SkyhookDndService],
+  template: `<span [class.dragging]="isDragging$|async">♘</span>`, //  template: `<span [dragSource]="knightSource" [class.dragging]="isDragging$|async">♘</span>`,
+  // providers: [ SkyhookDndService],
   styles: [`
     span {
         font-weight: 400;
