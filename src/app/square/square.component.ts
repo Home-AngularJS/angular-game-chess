@@ -3,10 +3,10 @@ import {Coord} from '../coord';
 
 @Component({
   selector: 'app-square',
-  templateUrl: './square-component.component.html',
-  styleUrls: ['./square-component.component.css']
+  templateUrl: './square.component.html',
+  styleUrls: ['./square.component.css']
 })
-export class SquareComponentComponent implements OnInit {
+export class SquareComponent implements OnInit {
 
   @Input() black: boolean;
 
