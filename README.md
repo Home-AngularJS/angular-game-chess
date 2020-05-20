@@ -2,6 +2,9 @@
 
 * [Chess Tutorial](https://cormacrelf.github.io/angular-skyhook/additional-documentation/chess-tutorial.html)
 * [Code-Demo](https://stackblitz.com/edit/angular-skyhook-chess)
+* Link Docs:
+  * https://cormacrelf.github.io/angular-skyhook/additional-documentation/chess-tutorial.html
+  * https://github.com/cormacrelf/angular-skyhook/tree/chessboard-1/packages/examples/src/app/chessboard
 
 ## Development server
 

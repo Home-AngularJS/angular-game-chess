@@ -1,13 +1,13 @@
 import { Component, Input  } from '@angular/core';
 import { SkyhookDndService } from '@angular-skyhook/core';
 import { ItemTypes } from '../../core/model/constants';
-import {GameService} from '../../core/service/game.service';
+import { GameService } from '../../core/service/game.service';
 import { Coord } from '../../core/model/coord';
 
 @Component({
     selector: 'app-board-square',
     template: `
-                         <!-- step 3 -->
+    <!-- step 3 -->
     <div class="wrapper" [dropTarget]="target">
         <app-square [black]="black">
             <ng-content></ng-content>

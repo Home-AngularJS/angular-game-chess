@@ -8,8 +8,8 @@ import { GameService } from '../../core/service/game.service';
   styleUrls: ['./board.component.css']
 })
 export class BoardComponent implements OnInit {
-  // not sure what the map is doing here in original code seems superflous since we're newing one up anyway???
-  // nope he is filling the sixty-four with 0 through 63 so he can do math on it later.
+  // Не уверен что карта работает в оригинальном коде, это кажется излишним так как мы все равно его обновляем...
+  // (чтобы сделать математику позже заполняем с 0 по 63)
   sixtyFour = new Array(64).fill(0).map((_, i) => i);
   //sixtyFour = new Array(64).fill(0);
 
