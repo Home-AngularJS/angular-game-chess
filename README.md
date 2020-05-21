@@ -1,7 +1,19 @@
-# Chess
+# Chess - Welcome to @angular-skyhook.
 
 * [Chess Tutorial](https://cormacrelf.github.io/angular-skyhook/additional-documentation/chess-tutorial.html) **(** [Учебник по шахматам](https://translate.google.com.ua/translate?hl=ru&tab=rT&sl=en&tl=ru&u=https%3A%2F%2Fcormacrelf.github.io%2Fangular-skyhook%2Fadditional-documentation%2Fchess-tutorial.html) **)**
+  * [React DnD Tutorial](https://react-dnd.github.io/react-dnd/about) **(** Drag and Drop for React **)**
 * [Code-Demo](https://stackblitz.com/edit/angular-skyhook-chess)
+  * Исходный код на GitHub **(** angular-skyhook **)** с четырьмя коммитами:
+    * [board visuals with static knight](https://github.com/cormacrelf/angular-skyhook/tree/chessboard-1/packages/examples/src/app/chessboard)
+    * [game logic and click-based movement](https://github.com/cormacrelf/angular-skyhook/tree/chessboard-2/packages/examples/src/app/chessboard)
+    * [drag and drop](https://github.com/cormacrelf/angular-skyhook/tree/chessboard-3/packages/examples/src/app/chessboard)
+    * [visual move guidance and custom drag preview](https://github.com/cormacrelf/angular-skyhook/tree/chessboard-4/packages/examples/src/app/chessboard)
+  * [Поиграть на живом демо-примере](https://cormacrelf.github.io/angular-skyhook/examples/index.html)
+  * `SkyhookDndModule` - подключить бэкэнд-модуль из библиотеки *React DnD*
+  * `HTML5Backend` - подключить HTML5 из библиотеки *React DnD*
+  * `SquareComponent` - один черный/белый-квадрат на доске
+  * `BoardComponent` - 64-квадрата
+  * `KnightComponent` - рендеринг одной фигуры
 * Link Docs:
   * https://cormacrelf.github.io/angular-skyhook/additional-documentation/chess-tutorial.html
   * https://github.com/cormacrelf/angular-skyhook/tree/chessboard-1/packages/examples/src/app/chessboard
