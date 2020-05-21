@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { SkyhookDndService } from "@angular-skyhook/core";
+import { SkyhookDndService } from '@angular-skyhook/core';
 import { ItemTypes } from '../../../core/model/chess-piece';
 
 @Component({
   selector: 'app-knight',
-  template: `<span [class.dragging]="isDragging$|async">♘</span>`,
+  template: `<span [class.dragging]="isDragging$|async">♞</span>`,
   styles: [`
     span {
         font-weight: 400;

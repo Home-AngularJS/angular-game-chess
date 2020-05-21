@@ -13,17 +13,26 @@ export class BoardComponent implements OnInit {
   //sixtyFour = new Array(64).fill(0);
   sixtyFour = new Array(64).fill(0).map((_, i) => i);
 
+  kingPosition$ = this.gameService.kingPosition$;
+  queenPosition$ = this.gameService.queenPosition$;
+  bishopPosition$ = this.gameService.bishopPosition$;
   knightPosition$ = this.gameService.knightPosition$;
+  pawnPosition$ = this.gameService.pawnPosition$;
+  rookPosition$ = this.gameService.rookPosition$;
 
   constructor(private gameService : GameService) {
-      console.log("in board constructor");
   }
 
   ngOnInit() {
   }
 
   handleSquareClick(pos: Coord) {
-      this.gameService.moveKnight(pos);
+    this.gameService.moveKing(pos);
+    this.gameService.moveQueen(pos);
+    this.gameService.moveBishop(pos);
+    this.gameService.moveKnight(pos);
+    this.gameService.movePawn(pos);
+    this.gameService.moveRook(pos);
   }
 
   xy(i): Coord {
