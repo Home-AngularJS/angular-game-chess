@@ -4,16 +4,13 @@ import { ItemTypes } from '../../../core/model/chess-piece';
 
 @Component({
   selector: 'app-knight',
- // template: `<span>♘</span>`,
-  template: `<span [class.dragging]="isDragging$|async">♘</span>`, //  template: `<span [dragSource]="knightSource" [class.dragging]="isDragging$|async">♘</span>`,
-  // providers: [ SkyhookDndService],
+  template: `<span [class.dragging]="isDragging$|async">♘</span>`,
   styles: [`
     span {
         font-weight: 400;
         font-size: 54px;
         line-height: 70px;
     }
-    /* in the style block */
     .dragging {
         opacity: 0.25;
         color : red;
@@ -22,23 +19,23 @@ import { ItemTypes } from '../../../core/model/chess-piece';
 })
 export class KnightComponent implements OnInit {
 
-    // step 2
-    knightSource = this.dnd.dragSource(ItemTypes.KNIGHT, {
-        beginDrag: () => ({})
-    });
+  // step 2
+  knightSource = this.dnd.dragSource(ItemTypes.KNIGHT, {
+      beginDrag: () => ({})
+  });
 
-    // component (this is an Observable<boolean>)
-    isDragging$ = this.knightSource.listen(monitor =>  monitor.isDragging());
+  // component (this is an Observable<boolean>)
+  isDragging$ = this.knightSource.listen(monitor =>  monitor.isDragging());
 
   // step 1
-    constructor(private dnd: SkyhookDndService) { }
+  constructor(private dnd: SkyhookDndService) { }
 
-   // step 4
-    ngOnDestroy() {
-        this.knightSource.unsubscribe();
-    }
+  ngOnInit() {
+  }
 
-    ngOnInit() {
-    }
+  // step 4
+  ngOnDestroy() {
+    this.knightSource.unsubscribe();
+  }
 
 }
