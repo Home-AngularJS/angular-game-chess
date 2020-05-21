@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SkyhookDndService } from "@angular-skyhook/core";
-import { ItemTypes } from '../../core/model/constants';
+import { ItemTypes } from '../../../core/model/chess-piece';
 
 @Component({
   selector: 'app-knight',

@@ -1,10 +1,25 @@
 # Chess Game
 
-* [Chess Tutorial](https://cormacrelf.github.io/angular-skyhook/additional-documentation/chess-tutorial.html)
+* [Chess Tutorial](https://cormacrelf.github.io/angular-skyhook/additional-documentation/chess-tutorial.html) **(** [Учебник по шахматам](https://translate.google.com.ua/translate?hl=ru&tab=rT&sl=en&tl=ru&u=https%3A%2F%2Fcormacrelf.github.io%2Fangular-skyhook%2Fadditional-documentation%2Fchess-tutorial.html) **)**
 * [Code-Demo](https://stackblitz.com/edit/angular-skyhook-chess)
 * Link Docs:
   * https://cormacrelf.github.io/angular-skyhook/additional-documentation/chess-tutorial.html
   * https://github.com/cormacrelf/angular-skyhook/tree/chessboard-1/packages/examples/src/app/chessboard
+* [CHESS SYMBOLS](http://www.i2symbol.com/symbols/chess) **(** `http://www.i2symbol.com/symbols/chess` **)**
+  * **White Chess Symbols**
+    1. King (Король) `♔`
+    2. Queen (Королева) `♕`
+    3. Bishop (Слон)  `♗`
+    4. Knight (Конь) `♘`
+    5. Pawn (Пешка)  `♙`
+    6. Rook (Ладья)  `♖`
+  * **Black Chess Symbols**
+    1. King (Король) `♚`
+    2. Queen (Королева) `♛`
+    3. Bishop (Слон) `♝`
+    4. Knight (Конь) `♞`
+    5. Pawn (Пешка) `♟`
+    6. Rook (Ладья) `♜`
 
 ## Development server
 

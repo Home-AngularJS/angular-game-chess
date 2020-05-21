@@ -1,6 +1,6 @@
 import { Component, Input  } from '@angular/core';
 import { SkyhookDndService } from '@angular-skyhook/core';
-import { ItemTypes } from '../../core/model/constants';
+import { ItemTypes } from '../../core/model/chess-piece';
 import { GameService } from '../../core/service/game.service';
 import { Coord } from '../../core/model/coord';
 
