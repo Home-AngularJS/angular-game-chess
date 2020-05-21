@@ -9,7 +9,7 @@ import { ContainerComponent } from './layout/container/container.component';
 import { default as HTML5Backend } from 'react-dnd-html5-backend'
 import { RouterModule } from '@angular/router';
 import { SkyhookDndModule } from '@angular-skyhook/core';
-import { GameService } from './core/service/game.service';
+import { ChessService } from './core/service/chess.service';
 import { BoardSquareComponent } from './layout/board-square/board-square.component';
 // import { ItemTypes } from './chess-piece';
 // import { Coord } from './coord';
@@ -29,7 +29,7 @@ import { BoardSquareComponent } from './layout/board-square/board-square.compone
     ContainerComponent,
     BoardSquareComponent
   ],
-  providers: [ GameService ],
+  providers: [ ChessService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule {

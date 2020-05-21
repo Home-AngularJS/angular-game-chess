@@ -3,7 +3,7 @@ import { BehaviorSubject } from 'rxjs';
 import { Coord } from '../model/coord';
 
 @Injectable()
-export class GameService {
+export class ChessService {
 
   kingPosition$ = new BehaviorSubject<Coord>({ x: 4, y: 0 }); // TODO   x: 4, y: 0
   queenPosition$ = new BehaviorSubject<Coord>({ x: 3, y: 0 }); // TODO   x: 3, y: 0

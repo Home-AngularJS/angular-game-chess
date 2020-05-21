@@ -1,7 +1,7 @@
 import { Component, Input  } from '@angular/core';
 import { SkyhookDndService } from '@angular-skyhook/core';
 import { ItemTypes } from '../../core/model/chess-piece';
-import { GameService } from '../../core/service/game.service';
+import { ChessService } from '../../core/service/chess.service';
 import { Coord } from '../../core/model/coord';
 
 @Component({
@@ -32,12 +32,12 @@ export class BoardSquareComponent {
     // TODO: step 2
     target = this.dnd.dropTarget(ItemTypes.KNIGHT, {
       drop: monitor => {
-          this.game.moveKnight(this.position);
+          this.chessService.moveKnight(this.position);
       }
     });
 
     // TODO: step 1
-    constructor(private dnd: SkyhookDndService, private game: GameService) { }
+    constructor(private dnd: SkyhookDndService, private chessService: ChessService) { }
 
     // TODO: step 4
     ngOnDestroy() {

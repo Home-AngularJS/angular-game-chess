@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Coord } from '../../core/model/coord';
-import { GameService } from '../../core/service/game.service';
+import { ChessService } from '../../core/service/chess.service';
 
 @Component({
   selector: 'app-board',
@@ -13,26 +13,26 @@ export class BoardComponent implements OnInit {
   //sixtyFour = new Array(64).fill(0);
   sixtyFour = new Array(64).fill(0).map((_, i) => i);
 
-  kingPosition$ = this.gameService.kingPosition$;
-  queenPosition$ = this.gameService.queenPosition$;
-  bishopPosition$ = this.gameService.bishopPosition$;
-  knightPosition$ = this.gameService.knightPosition$;
-  pawnPosition$ = this.gameService.pawnPosition$;
-  rookPosition$ = this.gameService.rookPosition$;
+  kingPosition$ = this.chessService.kingPosition$;
+  queenPosition$ = this.chessService.queenPosition$;
+  bishopPosition$ = this.chessService.bishopPosition$;
+  knightPosition$ = this.chessService.knightPosition$;
+  pawnPosition$ = this.chessService.pawnPosition$;
+  rookPosition$ = this.chessService.rookPosition$;
 
-  constructor(private gameService : GameService) {
+  constructor(private chessService : ChessService) {
   }
 
   ngOnInit() {
   }
 
   handleSquareClick(pos: Coord) {
-    this.gameService.moveKing(pos);
-    this.gameService.moveQueen(pos);
-    this.gameService.moveBishop(pos);
-    this.gameService.moveKnight(pos);
-    this.gameService.movePawn(pos);
-    this.gameService.moveRook(pos);
+    this.chessService.moveKing(pos);
+    this.chessService.moveQueen(pos);
+    this.chessService.moveBishop(pos);
+    this.chessService.moveKnight(pos);
+    this.chessService.movePawn(pos);
+    this.chessService.moveRook(pos);
   }
 
   xy(i): Coord {
