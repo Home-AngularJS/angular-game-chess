@@ -5,22 +5,22 @@ import { Position } from '../model/position';
 @Injectable()
 export class ChessService {
 
-  chessKingPosition$ = new BehaviorSubject<Position>({ x: 4, y: 0 }); // TODO   x: 4, y: 0
-  chessQueenPosition$ = new BehaviorSubject<Position>({ x: 3, y: 0 }); // TODO   x: 3, y: 0
-  chessBishopPosition1$ = new BehaviorSubject<Position>({ x: 2, y: 0 }); // TODO   x: 2, y: 0
-  chessBishopPosition2$ = new BehaviorSubject<Position>({ x: 5, y: 0 }); // TODO   x: 5, y: 0
-  chessKnightPosition1$ = new BehaviorSubject<Position>({ x: 1, y: 0 }); // TODO   x: 1, y: 0
-  chessKnightPosition2$ = new BehaviorSubject<Position>({ x: 6, y: 0 }); // TODO   x: 6, y: 0
-  chessRookPosition1$ = new BehaviorSubject<Position>({ x: 0, y: 0 }); // TODO   x: 0, y: 0
-  chessRookPosition2$ = new BehaviorSubject<Position>({ x: 7, y: 0 }); // TODO   x: 7, y: 0
-  chessPawnPosition1$ = new BehaviorSubject<Position>({ x: 0, y: 1 });// TODO   x: 0, y: 1
-  chessPawnPosition2$ = new BehaviorSubject<Position>({ x: 1, y: 1 });// TODO   x: 1, y: 1   x: 2, y: 1   x: 3, y: 1   x: 4, y: 1   x: 5, y: 1   x: 6, y: 1   x: 7, y: 1
-  chessPawnPosition3$ = new BehaviorSubject<Position>({ x: 2, y: 1 });// TODO  x: 2, y: 1   x: 3, y: 1   x: 4, y: 1   x: 5, y: 1   x: 6, y: 1   x: 7, y: 1
-  chessPawnPosition4$ = new BehaviorSubject<Position>({ x: 3, y: 1 });// TODO   x: 3, y: 1   x: 4, y: 1   x: 5, y: 1   x: 6, y: 1   x: 7, y: 1
-  chessPawnPosition5$ = new BehaviorSubject<Position>({ x: 4, y: 1 });// TODO   x: 4, y: 1   x: 5, y: 1   x: 6, y: 1   x: 7, y: 1
-  chessPawnPosition6$ = new BehaviorSubject<Position>({ x: 5, y: 1 });// TODO   x: 5, y: 1   x: 6, y: 1   x: 7, y: 1
-  chessPawnPosition7$ = new BehaviorSubject<Position>({ x: 6, y: 1 });// TODO   x: 6, y: 1   x: 7, y: 1
-  chessPawnPosition8$ = new BehaviorSubject<Position>({ x: 7, y: 1 });// TODO   x: 7, y: 1
+  chessKingPosition$ = new BehaviorSubject<Position>({ x: 4, y: 0 });
+  chessQueenPosition$ = new BehaviorSubject<Position>({ x: 3, y: 0 });
+  chessBishopPosition1$ = new BehaviorSubject<Position>({ x: 2, y: 0 });
+  chessBishopPosition2$ = new BehaviorSubject<Position>({ x: 5, y: 0 });
+  chessKnightPosition1$ = new BehaviorSubject<Position>({ x: 1, y: 0 });
+  chessKnightPosition2$ = new BehaviorSubject<Position>({ x: 6, y: 0 });
+  chessRookPosition1$ = new BehaviorSubject<Position>({ x: 0, y: 0 });
+  chessRookPosition2$ = new BehaviorSubject<Position>({ x: 7, y: 0 });
+  chessPawnPosition1$ = new BehaviorSubject<Position>({ x: 0, y: 1 });
+  chessPawnPosition2$ = new BehaviorSubject<Position>({ x: 1, y: 1 });
+  chessPawnPosition3$ = new BehaviorSubject<Position>({ x: 2, y: 1 });
+  chessPawnPosition4$ = new BehaviorSubject<Position>({ x: 3, y: 1 });
+  chessPawnPosition5$ = new BehaviorSubject<Position>({ x: 4, y: 1 });
+  chessPawnPosition6$ = new BehaviorSubject<Position>({ x: 5, y: 1 });
+  chessPawnPosition7$ = new BehaviorSubject<Position>({ x: 6, y: 1 });
+  chessPawnPosition8$ = new BehaviorSubject<Position>({ x: 7, y: 1 });
 
   moveChessKing(to: Position) {
     this.chessKingPosition$.next(to);
