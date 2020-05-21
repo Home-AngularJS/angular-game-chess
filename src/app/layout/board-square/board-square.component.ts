@@ -2,7 +2,7 @@ import { Component, Input  } from '@angular/core';
 import { SkyhookDndService } from '@angular-skyhook/core';
 import { ItemTypes } from '../../core/model/chess-piece';
 import { ChessService } from '../../core/service/chess.service';
-import { Coord } from '../../core/model/coord';
+import { Position } from '../../core/model/position';
 
 @Component({
     selector: 'app-board-square',
@@ -23,7 +23,7 @@ import { Coord } from '../../core/model/coord';
     `]
 })
 export class BoardSquareComponent {
-    @Input() position: Coord;
+    @Input() position: Position;
     get black() {
          const { x, y } = this.position;
          return (x + y) % 2 === 1;

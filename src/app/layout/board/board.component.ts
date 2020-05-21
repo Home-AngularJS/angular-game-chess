@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Coord } from '../../core/model/coord';
+import { Position } from '../../core/model/position';
 import { ChessService } from '../../core/service/chess.service';
 
 @Component({
@@ -26,7 +26,7 @@ export class BoardComponent implements OnInit {
   ngOnInit() {
   }
 
-  handleSquareClick(pos: Coord) {
+  handleSquareClick(pos: Position) {
     this.chessService.moveChessKing(pos);
     this.chessService.moveChessQueen(pos);
     this.chessService.moveChessBishop(pos);
@@ -35,7 +35,7 @@ export class BoardComponent implements OnInit {
     this.chessService.moveChessRook(pos);
   }
 
-  xy(i): Coord {
+  xy(i): Position {
         console.log("in xy()");
         return {
             x: i % 8,
@@ -43,7 +43,7 @@ export class BoardComponent implements OnInit {
         }
       }
 
-   isBlack({ x, y }: Coord) {
+   isBlack({ x, y }: Position) {
       //return true;
       console.log(x + "," + y)
       return (x + y) % 2 === 1;

@@ -12,7 +12,7 @@ import { SkyhookDndModule } from '@angular-skyhook/core';
 import { ChessService } from './core/service/chess.service';
 import { BoardSquareComponent } from './layout/board-square/board-square.component';
 // import { ItemTypes } from './chess-piece';
-// import { Coord } from './coord';
+// import { Position } from './position';
 
 @NgModule({
   imports: [
