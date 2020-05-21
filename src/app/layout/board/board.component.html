@@ -3,11 +3,11 @@
   <ng-container *ngIf="knightPosition$|async as kp">
     <div class="square-container" *ngFor="let i of sixtyFour">
       <app-square *ngIf="xy(i) as pos" [black]="isBlack(pos)"  (click)="handleSquareClick(pos)">
-        <app-knight *ngIf="pos.x === kp.x && pos.y === kp.y"></app-knight>
+        <app-chess-knight *ngIf="pos.x === kp.x && pos.y === kp.y"></app-chess-knight>
       </app-square>
 
 <!--      <app-board-square *ngIf="xy(i) as pos" [position]="pos">-->
-<!--        <app-knight *ngIf="pos.x === kp.x && pos.y === kp.y"></app-knight>-->
+<!--        <app-chess-knight *ngIf="pos.x === kp.x && pos.y === kp.y"></app-chess-knight>-->
 <!--      </app-board-square>-->
     </div>
   </ng-container>

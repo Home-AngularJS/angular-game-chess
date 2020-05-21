@@ -3,7 +3,7 @@ import { SkyhookDndService } from '@angular-skyhook/core';
 import { ItemTypes } from '../../../core/model/chess-piece';
 
 @Component({
-  selector: 'app-knight',
+  selector: 'app-chess-knight',
   template: `<span [class.dragging]="isDragging$|async">♞</span>`,
   styles: [`
     span {
