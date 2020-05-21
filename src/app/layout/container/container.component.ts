@@ -1,19 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-    selector: 'app-container',
-    template: `
-    <div class="container">
-        <app-board></app-board>
-    </div>
-    `, styles: [`
-    .container { 
-        width: 560px;
-        height: 560px;
-    }
-    `]
+  selector: 'app-container',
+  templateUrl: './container.component.html',
+  styleUrls: ['./container.component.css']
 })
-
 export class ContainerComponent implements OnInit {
 
   constructor() { }
@@ -22,5 +13,3 @@ export class ContainerComponent implements OnInit {
   }
 
 }
-
-
