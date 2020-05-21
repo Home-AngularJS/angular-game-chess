@@ -2,7 +2,7 @@ import { NgModule, ModuleWithProviders } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
-import { KnightComponent } from './layout/chess-piece/knight/knight.component';
+import { ChessKnightComponent } from './layout/chess-piece/chess-knight/chess-knight.component';
 import { SquareComponent } from './layout/square/square.component';
 import { BoardComponent } from './layout/board/board.component';
 import { ContainerComponent } from './layout/container/container.component';
@@ -23,7 +23,7 @@ import { BoardSquareComponent } from './layout/board-square/board-square.compone
   ],
   declarations: [
     AppComponent,
-    KnightComponent,
+    ChessKnightComponent,
     SquareComponent,
     BoardComponent,
     ContainerComponent,

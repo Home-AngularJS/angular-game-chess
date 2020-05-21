@@ -17,7 +17,7 @@ import { ItemTypes } from '../../../core/model/chess-piece';
     }
     `]
 })
-export class KnightComponent implements OnInit {
+export class ChessKnightComponent implements OnInit {
 
   // TODO: step 2
   knightSource = this.dnd.dragSource(ItemTypes.KNIGHT, {
