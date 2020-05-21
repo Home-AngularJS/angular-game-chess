@@ -16,7 +16,8 @@ export class BoardComponent implements OnInit {
   chessKingPosition$ = this.chessService.chessKingPosition$;
   chessQueenPosition$ = this.chessService.chessQueenPosition$;
   chessBishopPosition$ = this.chessService.chessBishopPosition$;
-  chessKnightPosition$ = this.chessService.chessKnightPosition$;
+  chessKnightPosition1$ = this.chessService.chessKnightPosition1$;
+  chessKnightPosition2$ = this.chessService.chessKnightPosition2$;
   chessPawnPosition$ = this.chessService.chessPawnPosition$;
   chessRookPosition$ = this.chessService.chessRookPosition$;
 
@@ -30,7 +31,8 @@ export class BoardComponent implements OnInit {
     this.chessService.moveChessKing(pos);
     this.chessService.moveChessQueen(pos);
     this.chessService.moveChessBishop(pos);
-    this.chessService.moveChessKnight(pos);
+    this.chessService.moveChessKnight1(pos);
+    this.chessService.moveChessKnight2(pos);
     this.chessService.moveChessPawn(pos);
     this.chessService.moveChessRook(pos);
   }

@@ -1,9 +1,9 @@
 <div class="board">
   <!-- if не может работать в одном и том же элементе div поэтому здесь для if используется ng-container -->
-  <ng-container *ngIf="chessKnightPosition$|async as kp">
+  <ng-container *ngIf="chessKnightPosition1$|async as chessKnightPosition">
     <div class="square-container" *ngFor="let i of sixtyFour">
-      <app-square *ngIf="xy(i) as pos" [black]="isBlack(pos)"  (click)="handleSquareClick(pos)">
-        <app-chess-knight *ngIf="pos.x === kp.x && pos.y === kp.y"></app-chess-knight>
+      <app-square *ngIf="xy(i) as position" [black]="isBlack(position)"  (click)="handleSquareClick(position)">
+        <app-chess-knight *ngIf="position.x === chessKnightPosition.x && position.y === chessKnightPosition.y"></app-chess-knight>
       </app-square>
     </div>
   </ng-container>
