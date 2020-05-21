@@ -27,14 +27,14 @@ export class BoardComponent implements OnInit {
   ngOnInit() {
   }
 
-  handleSquareClick(pos: Position) {
-    this.chessService.moveChessKing(pos);
-    this.chessService.moveChessQueen(pos);
-    this.chessService.moveChessBishop(pos);
-    this.chessService.moveChessKnight1(pos);
-    this.chessService.moveChessKnight2(pos);
-    this.chessService.moveChessPawn(pos);
-    this.chessService.moveChessRook(pos);
+  handleSquareClick(position: Position) {
+    this.chessService.moveChessKing(position);
+    this.chessService.moveChessQueen(position);
+    this.chessService.moveChessBishop(position);
+    this.chessService.moveChessKnight1(position);
+    this.chessService.moveChessKnight2(position);
+    this.chessService.moveChessPawn(position);
+    this.chessService.moveChessRook(position);
   }
 
   xy(i): Position {
