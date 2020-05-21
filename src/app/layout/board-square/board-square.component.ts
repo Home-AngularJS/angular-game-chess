@@ -29,17 +29,17 @@ export class BoardSquareComponent {
          return (x + y) % 2 === 1;
     }
 
-    // step 2
+    // TODO: step 2
     target = this.dnd.dropTarget(ItemTypes.KNIGHT, {
       drop: monitor => {
           this.game.moveKnight(this.position);
       }
     });
 
-    // step 1
+    // TODO: step 1
     constructor(private dnd: SkyhookDndService, private game: GameService) { }
 
-    // step 4
+    // TODO: step 4
     ngOnDestroy() {
         this.target.unsubscribe();
     }

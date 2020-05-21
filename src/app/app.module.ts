@@ -19,7 +19,7 @@ import { BoardSquareComponent } from './layout/board-square/board-square.compone
     BrowserModule,
     FormsModule,
     RouterModule.forChild([{ path: '', component: ContainerComponent }]),
-    SkyhookDndModule.forRoot({ backend: HTML5Backend }) // must for singleton
+    SkyhookDndModule.forRoot({ backend: HTML5Backend }) // TODO: нужно для синглтона
   ],
   declarations: [
     AppComponent,
@@ -29,15 +29,15 @@ import { BoardSquareComponent } from './layout/board-square/board-square.compone
     ContainerComponent,
     BoardSquareComponent
   ],
-  bootstrap: [ AppComponent ],
-  providers: [ GameService ]
+  providers: [ GameService ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule {
-  // This guy ensures one and only one Global injection across the app
+  // TODO: Обеспечивает только одну глобальную инъекцию через приложение
  /* static forRoot(): ModuleWithProviders {
     return {
       ngModule: GlobalsModule,
-      providers: [ Globals ]                       //<<<====here is the one and only provider
+      providers: [ Globals ] // TODO: единственный провайдер
     };
   }
   */

@@ -8,10 +8,10 @@ import { GameService } from '../../core/service/game.service';
   styleUrls: ['./board.component.css']
 })
 export class BoardComponent implements OnInit {
-  // Не уверен что карта работает в оригинальном коде, это кажется излишним так как мы все равно его обновляем...
-  // (чтобы сделать математику позже заполняем с 0 по 63)
-  sixtyFour = new Array(64).fill(0).map((_, i) => i);
+  // TODO: Не уверен что карта работает в оригинальном коде это кажется излишним так как мы все равно его обновляем...
+  // TODO: (чтобы сделать математику заполняем с 0 по 63)
   //sixtyFour = new Array(64).fill(0);
+  sixtyFour = new Array(64).fill(0).map((_, i) => i);
 
   knightPosition$ = this.gameService.knightPosition$;
 
@@ -39,4 +39,5 @@ export class BoardComponent implements OnInit {
       console.log(x + "," + y)
       return (x + y) % 2 === 1;
    }
+
 }
