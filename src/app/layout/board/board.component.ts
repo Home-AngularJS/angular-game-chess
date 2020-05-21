@@ -13,12 +13,12 @@ export class BoardComponent implements OnInit {
   //sixtyFour = new Array(64).fill(0);
   sixtyFour = new Array(64).fill(0).map((_, i) => i);
 
-  kingPosition$ = this.chessService.kingPosition$;
-  queenPosition$ = this.chessService.queenPosition$;
-  bishopPosition$ = this.chessService.bishopPosition$;
-  knightPosition$ = this.chessService.knightPosition$;
-  pawnPosition$ = this.chessService.pawnPosition$;
-  rookPosition$ = this.chessService.rookPosition$;
+  chessKingPosition$ = this.chessService.chessKingPosition$;
+  chessQueenPosition$ = this.chessService.chessQueenPosition$;
+  chessBishopPosition$ = this.chessService.chessBishopPosition$;
+  chessKnightPosition$ = this.chessService.chessKnightPosition$;
+  chessPawnPosition$ = this.chessService.chessPawnPosition$;
+  chessRookPosition$ = this.chessService.chessRookPosition$;
 
   constructor(private chessService : ChessService) {
   }
@@ -27,12 +27,12 @@ export class BoardComponent implements OnInit {
   }
 
   handleSquareClick(pos: Coord) {
-    this.chessService.moveKing(pos);
-    this.chessService.moveQueen(pos);
-    this.chessService.moveBishop(pos);
-    this.chessService.moveKnight(pos);
-    this.chessService.movePawn(pos);
-    this.chessService.moveRook(pos);
+    this.chessService.moveChessKing(pos);
+    this.chessService.moveChessQueen(pos);
+    this.chessService.moveChessBishop(pos);
+    this.chessService.moveChessKnight(pos);
+    this.chessService.moveChessPawn(pos);
+    this.chessService.moveChessRook(pos);
   }
 
   xy(i): Coord {

@@ -32,7 +32,7 @@ export class BoardSquareComponent {
     // TODO: step 2
     target = this.dnd.dropTarget(ItemTypes.KNIGHT, {
       drop: monitor => {
-          this.chessService.moveKnight(this.position);
+          this.chessService.moveChessKnight(this.position);
       }
     });
 

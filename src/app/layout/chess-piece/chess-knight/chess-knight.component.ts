@@ -20,12 +20,12 @@ import { ItemTypes } from '../../../core/model/chess-piece';
 export class ChessKnightComponent implements OnInit {
 
   // TODO: step 2
-  knightSource = this.dnd.dragSource(ItemTypes.KNIGHT, {
+  chessKnightSource = this.dnd.dragSource(ItemTypes.KNIGHT, {
       beginDrag: () => ({})
   });
 
   // component (this is an Observable<boolean>)
-  isDragging$ = this.knightSource.listen(monitor =>  monitor.isDragging());
+  isDragging$ = this.chessKnightSource.listen(monitor =>  monitor.isDragging());
 
   // TODO: step 1
   constructor(private dnd: SkyhookDndService) { }
@@ -35,7 +35,7 @@ export class ChessKnightComponent implements OnInit {
 
   // TODO: step 4
   ngOnDestroy() {
-    this.knightSource.unsubscribe();
+    this.chessKnightSource.unsubscribe();
   }
 
 }
