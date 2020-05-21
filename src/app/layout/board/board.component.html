@@ -5,10 +5,6 @@
       <app-square *ngIf="xy(i) as pos" [black]="isBlack(pos)"  (click)="handleSquareClick(pos)">
         <app-chess-knight *ngIf="pos.x === kp.x && pos.y === kp.y"></app-chess-knight>
       </app-square>
-
-<!--      <app-board-square *ngIf="xy(i) as pos" [position]="pos">-->
-<!--        <app-chess-chess-knight *ngIf="pos.x === kp.x && pos.y === kp.y"></app-chess-chess-knight>-->
-<!--      </app-board-square>-->
     </div>
   </ng-container>
 </div>

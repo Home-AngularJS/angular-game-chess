@@ -10,7 +10,6 @@ import { default as HTML5Backend } from 'react-dnd-html5-backend'
 import { RouterModule } from '@angular/router';
 import { SkyhookDndModule } from '@angular-skyhook/core';
 import { ChessService } from './core/service/chess.service';
-import { BoardSquareComponent } from './layout/board-square/board-square.component';
 // import { ItemTypes } from './chess-piece';
 // import { Position } from './position';
 
@@ -26,8 +25,7 @@ import { BoardSquareComponent } from './layout/board-square/board-square.compone
     ChessKnightComponent,
     SquareComponent,
     BoardComponent,
-    ContainerComponent,
-    BoardSquareComponent
+    ContainerComponent
   ],
   providers: [ ChessService ],
   bootstrap: [ AppComponent ]
