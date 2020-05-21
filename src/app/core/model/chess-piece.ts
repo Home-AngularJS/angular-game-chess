@@ -3,6 +3,6 @@ export const ItemTypes = {
   QUEEN: "QUEEN",
   BISHOP: "BISHOP",
   KNIGHT: "KNIGHT",
-  PAWN: "PAWN",
-  ROOK: "ROOK"
+  ROOK: "ROOK",
+  PAWN: "PAWN"
 }

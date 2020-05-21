@@ -23,17 +23,17 @@
     2. Queen (Королева) `♕`
     3. Bishop (Слон)  `♗`
     4. Knight (Конь) `♘`
-    5. Pawn (Пешка)  `♙`
-    6. Rook (Ладья)  `♖`
+    5. Rook (Ладья)  `♖`
+    6. Pawn (Пешка)  `♙`
   * **Black Chess Symbols**
     1. King (Король) `♚`
     2. Queen (Королева) `♛`
     3. Bishop (Слон) `♝`
     4. Knight (Конь) `♞`
-    5. Pawn (Пешка) `♟`
-    6. Rook (Ладья) `♜`
+    5. Rook (Ладья) `♜`
+    6. Pawn (Пешка) `♟`
 
-![chess-board-example](chess-board-example.jpg)
+![chess-board](chess-board.jpg)
 
 
 ## Development server
