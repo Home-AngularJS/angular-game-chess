@@ -4,18 +4,8 @@ import { ItemTypes } from '../../../core/model/chess-piece';
 
 @Component({
   selector: 'app-chess-pawn',
-  template: `<span [class.dragging]="isDragging$|async">♟</span>`,
-  styles: [`
-    span {
-        font-weight: 400;
-        font-size: 54px;
-        line-height: 70px;
-    }
-    .dragging {
-        opacity: 0.25;
-        color : red;
-    }
-    `]
+  templateUrl: './chess-pawn.component.html',
+  styleUrls: ['./chess-pawn.component.css']
 })
 export class ChessPawnComponent implements OnInit {
 
