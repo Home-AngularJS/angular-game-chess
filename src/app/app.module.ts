@@ -5,14 +5,14 @@ import { default as HTML5Backend } from 'react-dnd-html5-backend'
 import { SkyhookDndModule } from '@angular-skyhook/core';
 import { ChessService } from './core/service/chess.service';
 import { AppComponent } from './app.component';
-import { SquareComponent } from './layout/chess-board/square/square.component';
-import { BoardComponent } from './layout/chess-board/board/board.component';
-import { ChessBlackKingComponent } from "./layout/chess-piece/chess-black-king/chess-black-king.component";
-import { ChessBlackQueenComponent } from "./layout/chess-piece/chess-black-queen/chess-black-queen.component";
-import { ChessBlackBishopComponent } from "./layout/chess-piece/chess-black-bishop/chess-black-bishop.component";
-import { ChessBlackKnightComponent } from './layout/chess-piece/chess-black-knight/chess-black-knight.component';
-import { ChessBlackRookComponent } from "./layout/chess-piece/chess-black-rook/chess-black-rook.component";
-import { ChessBlackPawnComponent } from "./layout/chess-piece/chess-black-pawn/chess-black-pawn.component";
+import { SquareComponent } from './chess/chessboard/square/square.component';
+import { BoardComponent } from './chess/chessboard/board/board.component';
+import { ChessBlackKingComponent } from "./chess/chess-piece/chess-black-king/chess-black-king.component";
+import { ChessBlackQueenComponent } from "./chess/chess-piece/chess-black-queen/chess-black-queen.component";
+import { ChessBlackBishopComponent } from "./chess/chess-piece/chess-black-bishop/chess-black-bishop.component";
+import { ChessBlackKnightComponent } from './chess/chess-piece/chess-black-knight/chess-black-knight.component';
+import { ChessBlackRookComponent } from "./chess/chess-piece/chess-black-rook/chess-black-rook.component";
+import { ChessBlackPawnComponent } from "./chess/chess-piece/chess-black-pawn/chess-black-pawn.component";
 // import { ItemTypes } from './chess-piece';
 // import { Position } from './position';
 

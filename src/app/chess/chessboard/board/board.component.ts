@@ -13,23 +13,6 @@ export class BoardComponent implements OnInit {
     .fill(0)
     .map((_, i) => i);
 
-  chessBlackKingPosition$ = this.chessService.chessBlackKingPosition$;
-  chessBlackQueenPosition$ = this.chessService.chessBlackQueenPosition$;
-  chessBlackBishop1Position$ = this.chessService.chessBlackBishop1Position$;
-  chessBlackBishop2Position$ = this.chessService.chessBlackBishop2Position$;
-  chessBlackKnight1Position$ = this.chessService.chessBlackKnight1Position$;
-  chessBlackKnight2Position$ = this.chessService.chessBlackKnight2Position$;
-  chessBlackRook1Position$ = this.chessService.chessBlackRook1Position$;
-  chessBlackRook2Position$ = this.chessService.chessBlackRook2Position$;
-  chessBlackPawn1Position$ = this.chessService.chessBlackPawn1Position$;
-  chessBlackPawn2Position$ = this.chessService.chessBlackPawn2Position$;
-  chessBlackPawn3Position$ = this.chessService.chessBlackPawn3Position$;
-  chessBlackPawn4Position$ = this.chessService.chessBlackPawn4Position$;
-  chessBlackPawn5Position$ = this.chessService.chessBlackPawn5Position$;
-  chessBlackPawn6Position$ = this.chessService.chessBlackPawn6Position$;
-  chessBlackPawn7Position$ = this.chessService.chessBlackPawn7Position$;
-  chessBlackPawn8Position$ = this.chessService.chessBlackPawn8Position$;
-
   constructor(private chessService : ChessService) {
   }
 
@@ -63,8 +46,8 @@ export class BoardComponent implements OnInit {
     }
   }
 
-   isBlack({ x, y }: Position) {
-      console.log(x + "," + y)
-      return (x + y) % 2 === 1;
-   }
+  isBlack({ x, y }: Position) {
+    console.log(x + "," + y)
+    return (x + y) % 2 === 1;
+  }
 }
