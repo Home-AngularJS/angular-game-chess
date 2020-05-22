@@ -19,5 +19,4 @@ export class SquareComponent implements OnInit {
         ? { backgroundColor: '#eed2ad' }
         : { backgroundColor: '#c86835' }
   }
-
 }

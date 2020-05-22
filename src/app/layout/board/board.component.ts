@@ -8,27 +8,27 @@ import { ChessService } from '../../core/service/chess.service';
   styleUrls: ['./board.component.css']
 })
 export class BoardComponent implements OnInit {
-  // TODO: Не уверен что карта работает в оригинальном коде это кажется излишним так как мы все равно его обновляем...
-  // TODO: (чтобы сделать математику заполняем с 0 по 63)
-  //sixtyFour = new Array(64).fill(0);
-  sixtyFour = new Array(64).fill(0).map((_, i) => i);
+  // TODO: чтобы сделать математику заполняем с 0 по 63
+  sixtyFour = new Array(64)
+    .fill(0)
+    .map((_, i) => i);
 
   chessBlackKingPosition$ = this.chessService.chessBlackKingPosition$;
   chessBlackQueenPosition$ = this.chessService.chessBlackQueenPosition$;
-  chessBlackBishopPosition1$ = this.chessService.chessBlackBishopPosition1$;
-  chessBlackBishopPosition2$ = this.chessService.chessBlackBishopPosition2$;
-  chessBlackKnightPosition1$ = this.chessService.chessBlackKnightPosition1$;
-  chessBlackKnightPosition2$ = this.chessService.chessBlackKnightPosition2$;
-  chessBlackRookPosition1$ = this.chessService.chessBlackRookPosition1$;
-  chessBlackRookPosition2$ = this.chessService.chessBlackRookPosition2$;
-  chessBlackPawnPosition1$ = this.chessService.chessBlackPawnPosition1$;
-  chessBlackPawnPosition2$ = this.chessService.chessBlackPawnPosition2$;
-  chessBlackPawnPosition3$ = this.chessService.chessBlackPawnPosition3$;
-  chessBlackPawnPosition4$ = this.chessService.chessBlackPawnPosition4$;
-  chessBlackPawnPosition5$ = this.chessService.chessBlackPawnPosition5$;
-  chessBlackPawnPosition6$ = this.chessService.chessBlackPawnPosition6$;
-  chessBlackPawnPosition7$ = this.chessService.chessBlackPawnPosition7$;
-  chessBlackPawnPosition8$ = this.chessService.chessBlackPawnPosition8$;
+  chessBlackBishop1Position$ = this.chessService.chessBlackBishop1Position$;
+  chessBlackBishop2Position$ = this.chessService.chessBlackBishop2Position$;
+  chessBlackKnight1Position$ = this.chessService.chessBlackKnight1Position$;
+  chessBlackKnight2Position$ = this.chessService.chessBlackKnight2Position$;
+  chessBlackRook1Position$ = this.chessService.chessBlackRook1Position$;
+  chessBlackRook2Position$ = this.chessService.chessBlackRook2Position$;
+  chessBlackPawn1Position$ = this.chessService.chessBlackPawn1Position$;
+  chessBlackPawn2Position$ = this.chessService.chessBlackPawn2Position$;
+  chessBlackPawn3Position$ = this.chessService.chessBlackPawn3Position$;
+  chessBlackPawn4Position$ = this.chessService.chessBlackPawn4Position$;
+  chessBlackPawn5Position$ = this.chessService.chessBlackPawn5Position$;
+  chessBlackPawn6Position$ = this.chessService.chessBlackPawn6Position$;
+  chessBlackPawn7Position$ = this.chessService.chessBlackPawn7Position$;
+  chessBlackPawn8Position$ = this.chessService.chessBlackPawn8Position$;
 
   constructor(private chessService : ChessService) {
   }
@@ -56,17 +56,15 @@ export class BoardComponent implements OnInit {
   }
 
   xy(i): Position {
-        console.log("in xy()");
-        return {
-            x: i % 8,
-            y: Math.floor(i / 8)
-        }
-      }
+    console.log("in xy()");
+    return {
+        x: i % 8,
+        y: Math.floor(i / 8)
+    }
+  }
 
    isBlack({ x, y }: Position) {
-      //return true;
       console.log(x + "," + y)
       return (x + y) % 2 === 1;
    }
-
 }
