@@ -65,13 +65,71 @@
 <!--    </div>-->
 <!--  </ng-container>-->
 
-  <ng-container *ngIf="chessPawnPosition1$|async as chessPawnPosition">
+  <ng-container>
     <div class="square-container" *ngFor="let i of sixtyFour">
       <app-square *ngIf="xy(i) as position" [black]="isBlack(position)" (click)="handleSquareClick(position)">
-        <app-chess-pawn *ngIf="position.x === chessPawnPosition.x && position.y === chessPawnPosition.y"></app-chess-pawn>
+
+        <div *ngIf="chessRookPosition1$|async as chessPiecePosition">
+          <app-chess-rook *ngIf="position.x === chessPiecePosition.x && position.y === chessPiecePosition.y"></app-chess-rook>
+        </div>
+        <div *ngIf="chessKnightPosition1$|async as chessPiecePosition">
+          <app-chess-knight *ngIf="position.x === chessPiecePosition.x && position.y === chessPiecePosition.y"></app-chess-knight>
+        </div>
+        <div *ngIf="chessBishopPosition1$|async as chessPiecePosition">
+          <app-chess-bishop *ngIf="position.x === chessPiecePosition.x && position.y === chessPiecePosition.y"></app-chess-bishop>
+        </div>
+        <div *ngIf="chessQueenPosition$|async as chessPiecePosition">
+          <app-chess-queen *ngIf="position.x === chessPiecePosition.x && position.y === chessPiecePosition.y"></app-chess-queen>
+        </div>
+        <div *ngIf="chessKingPosition$|async as chessPiecePosition">
+          <app-chess-king *ngIf="position.x === chessPiecePosition.x && position.y === chessPiecePosition.y"></app-chess-king>
+        </div>
+        <div *ngIf="chessBishopPosition2$|async as chessPiecePosition">
+          <app-chess-bishop *ngIf="position.x === chessPiecePosition.x && position.y === chessPiecePosition.y"></app-chess-bishop>
+        </div>
+        <div *ngIf="chessKnightPosition2$|async as chessPiecePosition">
+          <app-chess-knight *ngIf="position.x === chessPiecePosition.x && position.y === chessPiecePosition.y"></app-chess-knight>
+        </div>
+        <div *ngIf="chessRookPosition2$|async as chessPiecePosition">
+          <app-chess-rook *ngIf="position.x === chessPiecePosition.x && position.y === chessPiecePosition.y"></app-chess-rook>
+        </div>
+
+        <div *ngIf="chessPawnPosition1$|async as chessPiecePosition">
+          <app-chess-pawn *ngIf="position.x === chessPiecePosition.x && position.y === chessPiecePosition.y"></app-chess-pawn>
+        </div>
+        <div *ngIf="chessPawnPosition2$|async as chessPiecePosition">
+          <app-chess-pawn *ngIf="position.x === chessPiecePosition.x && position.y === chessPiecePosition.y"></app-chess-pawn>
+        </div>
+        <div *ngIf="chessPawnPosition3$|async as chessPiecePosition">
+          <app-chess-pawn *ngIf="position.x === chessPiecePosition.x && position.y === chessPiecePosition.y"></app-chess-pawn>
+        </div>
+        <div *ngIf="chessPawnPosition4$|async as chessPiecePosition">
+          <app-chess-pawn *ngIf="position.x === chessPiecePosition.x && position.y === chessPiecePosition.y"></app-chess-pawn>
+        </div>
+        <div *ngIf="chessPawnPosition5$|async as chessPiecePosition">
+          <app-chess-pawn *ngIf="position.x === chessPiecePosition.x && position.y === chessPiecePosition.y"></app-chess-pawn>
+        </div>
+        <div *ngIf="chessPawnPosition6$|async as chessPiecePosition">
+          <app-chess-pawn *ngIf="position.x === chessPiecePosition.x && position.y === chessPiecePosition.y"></app-chess-pawn>
+        </div>
+        <div *ngIf="chessPawnPosition7$|async as chessPiecePosition">
+          <app-chess-pawn *ngIf="position.x === chessPiecePosition.x && position.y === chessPiecePosition.y"></app-chess-pawn>
+        </div>
+        <div *ngIf="chessPawnPosition8$|async as chessPiecePosition">
+          <app-chess-pawn *ngIf="position.x === chessPiecePosition.x && position.y === chessPiecePosition.y"></app-chess-pawn>
+        </div>
+
       </app-square>
     </div>
   </ng-container>
+
+<!--  <ng-container *ngIf="chessPawnPosition1$|async as chessPawnPosition">-->
+<!--    <div class="square-container" *ngFor="let i of sixtyFour">-->
+<!--      <app-square *ngIf="xy(i) as position" [black]="isBlack(position)" (click)="handleSquareClick(position)">-->
+<!--        <app-chess-pawn *ngIf="position.x === chessPawnPosition.x && position.y === chessPawnPosition.y"></app-chess-pawn>-->
+<!--      </app-square>-->
+<!--    </div>-->
+<!--  </ng-container>-->
 
 <!--  <ng-container *ngIf="chessPawnPosition2$|async as chessPawnPosition">-->
 <!--    <div class="square-container" *ngFor="let i of sixtyFour">-->
