@@ -1,0 +1,62 @@
+<div class="board">
+  <ng-container>
+    <div class="square-container" *ngFor="let pos of sixtyFour">
+      <app-square *ngIf="position(pos) as position" [isBlackSquare]="isBlackSquare(position)" (click)="handleSquare(position)">
+        <!-- Chess Black -->
+        <div *ngIf="chessService.chessBlackRook1Position$|async as chessBlackRook1Position">
+          <app-chess-black-rook *ngIf="equalPosition(position, chessBlackRook1Position)"></app-chess-black-rook>
+        </div>
+        <div *ngIf="chessService.chessBlackKnight1Position$|async as chessBlackKnight1Position">
+          <app-chess-black-knight *ngIf="equalPosition(position, chessBlackKnight1Position)"></app-chess-black-knight>
+        </div>
+        <div *ngIf="chessService.chessBlackBishop1Position$|async as chessBlackBishop1Position">
+          <app-chess-black-bishop *ngIf="equalPosition(position, chessBlackBishop1Position)"></app-chess-black-bishop>
+        </div>
+        <div *ngIf="chessService.chessBlackQueenPosition$|async as chessBlackQueenPosition">
+          <app-chess-black-queen *ngIf="equalPosition(position, chessBlackQueenPosition)"></app-chess-black-queen>
+        </div>
+        <div *ngIf="chessService.chessBlackKingPosition$|async as chessBlackKingPosition">
+          <app-chess-black-king *ngIf="equalPosition(position, chessBlackKingPosition)"></app-chess-black-king>
+        </div>
+        <div *ngIf="chessService.chessBlackBishop2Position$|async as chessBlackBishop2Position">
+          <app-chess-black-bishop *ngIf="equalPosition(position, chessBlackBishop2Position)"></app-chess-black-bishop>
+        </div>
+        <div *ngIf="chessService.chessBlackKnight2Position$|async as chessBlackKnight2Position">
+          <app-chess-black-knight *ngIf="equalPosition(position, chessBlackKnight2Position)"></app-chess-black-knight>
+        </div>
+        <div *ngIf="chessService.chessBlackRook2Position$|async as chessBlackRook2Position">
+          <app-chess-black-rook *ngIf="equalPosition(position, chessBlackRook2Position)"></app-chess-black-rook>
+        </div>
+
+        <div *ngIf="chessService.chessBlackPawn1Position$|async as chessBlackPawn1Position">
+          <app-chess-black-pawn *ngIf="equalPosition(position, chessBlackPawn1Position)"></app-chess-black-pawn>
+        </div>
+        <div *ngIf="chessService.chessBlackPawn2Position$|async as chessBlackPawn2Position">
+          <app-chess-black-pawn *ngIf="equalPosition(position, chessBlackPawn2Position)"></app-chess-black-pawn>
+        </div>
+        <div *ngIf="chessService.chessBlackPawn3Position$|async as chessBlackPawn3Position">
+          <app-chess-black-pawn *ngIf="equalPosition(position, chessBlackPawn3Position)"></app-chess-black-pawn>
+        </div>
+        <div *ngIf="chessService.chessBlackPawn4Position$|async as chessBlackPawn4Position">
+          <app-chess-black-pawn *ngIf="equalPosition(position, chessBlackPawn4Position)"></app-chess-black-pawn>
+        </div>
+        <div *ngIf="chessService.chessBlackPawn5Position$|async as chessBlackPawn5Position">
+          <app-chess-black-pawn *ngIf="equalPosition(position, chessBlackPawn5Position)"></app-chess-black-pawn>
+        </div>
+        <div *ngIf="chessService.chessBlackPawn6Position$|async as chessBlackPawn6Position">
+          <app-chess-black-pawn *ngIf="equalPosition(position, chessBlackPawn6Position)"></app-chess-black-pawn>
+        </div>
+        <div *ngIf="chessService.chessBlackPawn7Position$|async as chessBlackPawn7Position">
+          <app-chess-black-pawn *ngIf="equalPosition(position, chessBlackPawn7Position)"></app-chess-black-pawn>
+        </div>
+        <div *ngIf="chessService.chessBlackPawn8Position$|async as chessBlackPawn8Position">
+          <app-chess-black-pawn *ngIf="equalPosition(position, chessBlackPawn8Position)"></app-chess-black-pawn>
+        </div>
+        <!-- /Chess Black -->
+
+        <!-- Chess White -->
+        <!-- /Chess White -->
+      </app-square>
+    </div>
+  </ng-container>
+</div>
