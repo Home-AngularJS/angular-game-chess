@@ -11,7 +11,7 @@ export class BoardComponent implements OnInit {
   // TODO: чтобы сделать математику заполняем с 0 по 63
   sixtyFour = new Array(64)
     .fill(0)
-    .map((_, i) => i);
+    .map((_, i) => i)
 
   constructor(private chessService : ChessService) {
   }
@@ -19,17 +19,21 @@ export class BoardComponent implements OnInit {
   ngOnInit() {
   }
 
-  position(i): Position {
-    console.log("position()");
+  position(pos): Position {
+    console.log("position()")
     return {
-        x: i % 8,
-        y: Math.floor(i / 8)
+        x: pos % 8,
+        y: Math.floor(pos / 8)
     }
+  }
+
+  equalPosition(pos1, pos2) {
+    return pos1.x === pos2.x && pos1.y === pos2.y
   }
 
   isBlackSquare({ x, y }: Position) {
     console.log(x + "," + y)
-    return (x + y) % 2 === 1;
+    return (x + y) % 2 === 1
   }
 
   handleSquare(position: Position) {
