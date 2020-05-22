@@ -9,12 +9,12 @@ import { AppComponent } from './app.component';
 import { SquareComponent } from './layout/square/square.component';
 import { BoardComponent } from './layout/board/board.component';
 import { ContainerComponent } from './layout/container/container.component';
-import { ChessKingComponent } from "./layout/chess-piece/chess-king/chess-king.component";
-import { ChessQueenComponent } from "./layout/chess-piece/chess-queen/chess-queen.component";
-import { ChessBishopComponent } from "./layout/chess-piece/chess-bishop/chess-bishop.component";
-import { ChessKnightComponent } from './layout/chess-piece/chess-knight/chess-knight.component';
-import { ChessRookComponent } from "./layout/chess-piece/chess-rook/chess-rook.component";
-import { ChessPawnComponent } from "./layout/chess-piece/chess-pawn/chess-pawn.component";
+import { ChessBlackKingComponent } from "./layout/chess-piece/chess-black-king/chess-black-king.component";
+import { ChessBlackQueenComponent } from "./layout/chess-piece/chess-black-queen/chess-black-queen.component";
+import { ChessBlackBishopComponent } from "./layout/chess-piece/chess-black-bishop/chess-black-bishop.component";
+import { ChessBlackKnightComponent } from './layout/chess-piece/chess-black-knight/chess-black-knight.component';
+import { ChessBlackRookComponent } from "./layout/chess-piece/chess-black-rook/chess-black-rook.component";
+import { ChessBlackPawnComponent } from "./layout/chess-piece/chess-black-pawn/chess-black-pawn.component";
 // import { ItemTypes } from './chess-piece';
 // import { Position } from './position';
 
@@ -30,12 +30,12 @@ import { ChessPawnComponent } from "./layout/chess-piece/chess-pawn/chess-pawn.c
     SquareComponent,
     BoardComponent,
     ContainerComponent,
-    ChessKingComponent,
-    ChessQueenComponent,
-    ChessBishopComponent,
-    ChessKnightComponent,
-    ChessRookComponent,
-    ChessPawnComponent
+    ChessBlackKingComponent,
+    ChessBlackQueenComponent,
+    ChessBlackBishopComponent,
+    ChessBlackKnightComponent,
+    ChessBlackRookComponent,
+    ChessBlackPawnComponent
   ],
   providers: [ ChessService ],
   bootstrap: [ AppComponent ]

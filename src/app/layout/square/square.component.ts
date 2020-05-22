@@ -16,8 +16,8 @@ export class SquareComponent implements OnInit {
 
   getStyle() {
       return this.black
-          ? { backgroundColor: '#eed2ad', color: 'black' } // { backgroundColor: '#eed2ad', color: 'white' }
-          : { backgroundColor: '#c86835', color: 'black' }
+        ? { backgroundColor: '#eed2ad' }
+        : { backgroundColor: '#c86835' }
   }
 
 }

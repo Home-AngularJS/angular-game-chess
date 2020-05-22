@@ -3,19 +3,19 @@ import { SkyhookDndService } from '@angular-skyhook/core';
 import { ItemTypes } from '../../../core/model/chess-piece';
 
 @Component({
-  selector: 'app-chess-queen',
-  templateUrl: './chess-queen.component.html',
-  styleUrls: ['./chess-queen.component.css']
+  selector: 'app-chess-black-king',
+  templateUrl: './chess-black-king.component.html',
+  styleUrls: ['./chess-black-king.component.css']
 })
-export class ChessQueenComponent implements OnInit {
+export class ChessBlackKingComponent implements OnInit {
 
   // TODO: step 2
-  chessQueenSource = this.dnd.dragSource(ItemTypes.QUEEN, {
+  chessBlackKingSource = this.dnd.dragSource(ItemTypes.KING, {
       beginDrag: () => ({})
   });
 
   // component (this is an Observable<boolean>)
-  isDragging$ = this.chessQueenSource.listen(monitor =>  monitor.isDragging());
+  isDragging$ = this.chessBlackKingSource.listen(monitor =>  monitor.isDragging());
 
   // TODO: step 1
   constructor(private dnd: SkyhookDndService) { }
@@ -25,7 +25,7 @@ export class ChessQueenComponent implements OnInit {
 
   // TODO: step 4
   ngOnDestroy() {
-    this.chessQueenSource.unsubscribe();
+    this.chessBlackKingSource.unsubscribe();
   }
 
 }

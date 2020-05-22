@@ -13,22 +13,22 @@ export class BoardComponent implements OnInit {
   //sixtyFour = new Array(64).fill(0);
   sixtyFour = new Array(64).fill(0).map((_, i) => i);
 
-  chessKingPosition$ = this.chessService.chessKingPosition$;
-  chessQueenPosition$ = this.chessService.chessQueenPosition$;
-  chessBishopPosition1$ = this.chessService.chessBishopPosition1$;
-  chessBishopPosition2$ = this.chessService.chessBishopPosition2$;
-  chessKnightPosition1$ = this.chessService.chessKnightPosition1$;
-  chessKnightPosition2$ = this.chessService.chessKnightPosition2$;
-  chessRookPosition1$ = this.chessService.chessRookPosition1$;
-  chessRookPosition2$ = this.chessService.chessRookPosition2$;
-  chessPawnPosition1$ = this.chessService.chessPawnPosition1$;
-  chessPawnPosition2$ = this.chessService.chessPawnPosition2$;
-  chessPawnPosition3$ = this.chessService.chessPawnPosition3$;
-  chessPawnPosition4$ = this.chessService.chessPawnPosition4$;
-  chessPawnPosition5$ = this.chessService.chessPawnPosition5$;
-  chessPawnPosition6$ = this.chessService.chessPawnPosition6$;
-  chessPawnPosition7$ = this.chessService.chessPawnPosition7$;
-  chessPawnPosition8$ = this.chessService.chessPawnPosition8$;
+  chessBlackKingPosition$ = this.chessService.chessBlackKingPosition$;
+  chessBlackQueenPosition$ = this.chessService.chessBlackQueenPosition$;
+  chessBlackBishopPosition1$ = this.chessService.chessBlackBishopPosition1$;
+  chessBlackBishopPosition2$ = this.chessService.chessBlackBishopPosition2$;
+  chessBlackKnightPosition1$ = this.chessService.chessBlackKnightPosition1$;
+  chessBlackKnightPosition2$ = this.chessService.chessBlackKnightPosition2$;
+  chessBlackRookPosition1$ = this.chessService.chessBlackRookPosition1$;
+  chessBlackRookPosition2$ = this.chessService.chessBlackRookPosition2$;
+  chessBlackPawnPosition1$ = this.chessService.chessBlackPawnPosition1$;
+  chessBlackPawnPosition2$ = this.chessService.chessBlackPawnPosition2$;
+  chessBlackPawnPosition3$ = this.chessService.chessBlackPawnPosition3$;
+  chessBlackPawnPosition4$ = this.chessService.chessBlackPawnPosition4$;
+  chessBlackPawnPosition5$ = this.chessService.chessBlackPawnPosition5$;
+  chessBlackPawnPosition6$ = this.chessService.chessBlackPawnPosition6$;
+  chessBlackPawnPosition7$ = this.chessService.chessBlackPawnPosition7$;
+  chessBlackPawnPosition8$ = this.chessService.chessBlackPawnPosition8$;
 
   constructor(private chessService : ChessService) {
   }
@@ -37,22 +37,22 @@ export class BoardComponent implements OnInit {
   }
 
   handleSquareClick(position: Position) {
-    this.chessService.moveChessKing(position);
-    this.chessService.moveChessQueen(position);
-    this.chessService.moveChessBishop1(position);
-    this.chessService.moveChessBishop2(position);
-    this.chessService.moveChessKnight1(position);
-    this.chessService.moveChessKnight2(position);
-    this.chessService.moveChessRook1(position);
-    this.chessService.moveChessRook2(position);
-    this.chessService.moveChessPawn1(position);
-    this.chessService.moveChessPawn2(position);
-    this.chessService.moveChessPawn3(position);
-    this.chessService.moveChessPawn4(position);
-    this.chessService.moveChessPawn5(position);
-    this.chessService.moveChessPawn6(position);
-    this.chessService.moveChessPawn7(position);
-    this.chessService.moveChessPawn8(position);
+    this.chessService.moveChessBlackKing(position);
+    this.chessService.moveChessBlackQueen(position);
+    this.chessService.moveChessBlackBishop1(position);
+    this.chessService.moveChessBlackBishop2(position);
+    this.chessService.moveChessBlackKnight1(position);
+    this.chessService.moveChessBlackKnight2(position);
+    this.chessService.moveChessBlackRook1(position);
+    this.chessService.moveChessBlackRook2(position);
+    this.chessService.moveChessBlackPawn1(position);
+    this.chessService.moveChessBlackPawn2(position);
+    this.chessService.moveChessBlackPawn3(position);
+    this.chessService.moveChessBlackPawn4(position);
+    this.chessService.moveChessBlackPawn5(position);
+    this.chessService.moveChessBlackPawn6(position);
+    this.chessService.moveChessBlackPawn7(position);
+    this.chessService.moveChessBlackPawn8(position);
   }
 
   xy(i): Position {
