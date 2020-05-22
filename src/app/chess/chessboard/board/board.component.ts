@@ -20,7 +20,7 @@ export class BoardComponent implements OnInit {
   }
 
   position(pos): Position {
-    console.log("position()")
+    console.log("position:")
     return {
         x: pos % 8,
         y: Math.floor(pos / 8)
@@ -32,7 +32,7 @@ export class BoardComponent implements OnInit {
   }
 
   isBlackSquare({ x, y }: Position) {
-    console.log(x + "," + y)
+    console.log('X=' + x + ' Y=' + y)
     return (x + y) % 2 === 1
   }
 
