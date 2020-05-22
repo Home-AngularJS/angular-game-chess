@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class SquareComponent implements OnInit {
 
-  @Input() black: boolean;
+  @Input() isBlackSquare: boolean;
 
   constructor() { }
 
@@ -15,7 +15,7 @@ export class SquareComponent implements OnInit {
   }
 
   getStyle() {
-      return this.black
+      return this.isBlackSquare
         ? { backgroundColor: '#eed2ad' }
         : { backgroundColor: '#c86835' }
   }
