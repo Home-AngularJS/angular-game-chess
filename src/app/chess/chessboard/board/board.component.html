@@ -2,7 +2,7 @@
   <ng-container>
     <div class="square-container" *ngFor="let pos of sixtyFour">
       <app-square *ngIf="position(pos) as position" [isBlackSquare]="isBlackSquare(position)" (click)="handleSquare(position)">
-
+        <!-- Chess Black -->
         <div *ngIf="chessService.chessBlackRook1Position$|async as chessBlackRook1Position">
           <app-chess-black-rook *ngIf="equalPosition(position, chessBlackRook1Position)"></app-chess-black-rook>
         </div>
@@ -52,7 +52,10 @@
         <div *ngIf="chessService.chessBlackPawn8Position$|async as chessBlackPawn8Position">
           <app-chess-black-pawn *ngIf="equalPosition(position, chessBlackPawn8Position)"></app-chess-black-pawn>
         </div>
+        <!-- /Chess Black -->
 
+        <!-- Chess White -->
+        <!-- /Chess White -->
       </app-square>
     </div>
   </ng-container>
