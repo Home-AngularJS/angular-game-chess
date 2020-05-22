@@ -8,7 +8,6 @@ import { ChessService } from '../../../core/service/chess.service';
   styleUrls: ['./board.component.css']
 })
 export class BoardComponent implements OnInit {
-  // TODO: чтобы сделать математику заполняем с 0 по 63
   sixtyFour = new Array(64)
     .fill(0)
     .map((_, i) => i)
@@ -27,7 +26,7 @@ export class BoardComponent implements OnInit {
     }
   }
 
-  equalPosition(pos1, pos2) {
+  equalsPosition(pos1, pos2) {
     return pos1.x === pos2.x && pos1.y === pos2.y
   }
 
@@ -53,5 +52,21 @@ export class BoardComponent implements OnInit {
     this.chessService.moveChessBlackPawn6(position);
     this.chessService.moveChessBlackPawn7(position);
     this.chessService.moveChessBlackPawn8(position);
+    this.chessService.moveChessWhitePawn1(position);
+    this.chessService.moveChessWhitePawn2(position);
+    this.chessService.moveChessWhitePawn3(position);
+    this.chessService.moveChessWhitePawn4(position);
+    this.chessService.moveChessWhitePawn5(position);
+    this.chessService.moveChessWhitePawn6(position);
+    this.chessService.moveChessWhitePawn7(position);
+    this.chessService.moveChessWhitePawn8(position);
+    this.chessService.moveChessWhiteKing(position);
+    this.chessService.moveChessWhiteQueen(position);
+    this.chessService.moveChessWhiteBishop1(position);
+    this.chessService.moveChessWhiteBishop2(position);
+    this.chessService.moveChessWhiteKnight1(position);
+    this.chessService.moveChessWhiteKnight2(position);
+    this.chessService.moveChessWhiteRook1(position);
+    this.chessService.moveChessWhiteRook2(position);
   }
 }

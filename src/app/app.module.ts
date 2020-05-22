@@ -13,6 +13,12 @@ import { ChessBlackBishopComponent } from "./chess/chess-piece/chess-black-bisho
 import { ChessBlackKnightComponent } from './chess/chess-piece/chess-black-knight/chess-black-knight.component';
 import { ChessBlackRookComponent } from "./chess/chess-piece/chess-black-rook/chess-black-rook.component";
 import { ChessBlackPawnComponent } from "./chess/chess-piece/chess-black-pawn/chess-black-pawn.component";
+import { ChessWhiteKingComponent } from "./chess/chess-piece/chess-white-king/chess-white-king.component";
+import { ChessWhiteQueenComponent } from "./chess/chess-piece/chess-white-queen/chess-white-queen.component";
+import { ChessWhiteBishopComponent } from "./chess/chess-piece/chess-white-bishop/chess-white-bishop.component";
+import { ChessWhiteKnightComponent } from './chess/chess-piece/chess-white-knight/chess-white-knight.component';
+import { ChessWhiteRookComponent } from "./chess/chess-piece/chess-white-rook/chess-white-rook.component";
+import { ChessWhitePawnComponent } from "./chess/chess-piece/chess-white-pawn/chess-white-pawn.component";
 // import { ItemTypes } from './chess-piece';
 // import { Position } from './position';
 
@@ -31,7 +37,13 @@ import { ChessBlackPawnComponent } from "./chess/chess-piece/chess-black-pawn/ch
     ChessBlackBishopComponent,
     ChessBlackKnightComponent,
     ChessBlackRookComponent,
-    ChessBlackPawnComponent
+    ChessBlackPawnComponent,
+    ChessWhiteKingComponent,
+    ChessWhiteQueenComponent,
+    ChessWhiteBishopComponent,
+    ChessWhiteKnightComponent,
+    ChessWhiteRookComponent,
+    ChessWhitePawnComponent
   ],
   providers: [ ChessService ],
   bootstrap: [ AppComponent ]

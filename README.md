@@ -13,7 +13,7 @@
   * `HTML5Backend` - подключить HTML5 из библиотеки *React DnD*
   * `SquareComponent` - один черный/белый-квадрат на доске
   * `BoardComponent` - 64-квадрата
-  * `ChessBlackKnightComponent` - рендеринг одной фигуры
+  * `ChessKnightComponent` - рендеринг одной фигуры
 * Link Docs:
   * https://cormacrelf.github.io/angular-skyhook/additional-documentation/chess-tutorial.html
   * https://github.com/cormacrelf/angular-skyhook/tree/chessboard-1/packages/examples/src/app/chessboard
@@ -33,7 +33,7 @@
     5. Rook (Ладья) `♜`
     6. Pawn (Пешка) `♟`
 
-![chess-board](chess-board-example.jpg)
+![example](example.jpg)
 
 
 ## Development server
