@@ -33,7 +33,7 @@
     5. Rook (Ладья) `♜`
     6. Pawn (Пешка) `♟`
 
-![chess-board](chess-board.jpg)
+![chess-board](chess-board-example.jpg)
 
 
 ## Development server
