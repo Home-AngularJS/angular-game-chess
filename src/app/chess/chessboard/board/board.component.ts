@@ -19,7 +19,20 @@ export class BoardComponent implements OnInit {
   ngOnInit() {
   }
 
-  handleSquareClick(position: Position) {
+  position(i): Position {
+    console.log("position()");
+    return {
+        x: i % 8,
+        y: Math.floor(i / 8)
+    }
+  }
+
+  isBlackSquare({ x, y }: Position) {
+    console.log(x + "," + y)
+    return (x + y) % 2 === 1;
+  }
+
+  handleSquare(position: Position) {
     this.chessService.moveChessBlackKing(position);
     this.chessService.moveChessBlackQueen(position);
     this.chessService.moveChessBlackBishop1(position);
@@ -36,18 +49,5 @@ export class BoardComponent implements OnInit {
     this.chessService.moveChessBlackPawn6(position);
     this.chessService.moveChessBlackPawn7(position);
     this.chessService.moveChessBlackPawn8(position);
-  }
-
-  xy(i): Position {
-    console.log("in xy()");
-    return {
-        x: i % 8,
-        y: Math.floor(i / 8)
-    }
-  }
-
-  isBlack({ x, y }: Position) {
-    console.log(x + "," + y)
-    return (x + y) % 2 === 1;
   }
 }

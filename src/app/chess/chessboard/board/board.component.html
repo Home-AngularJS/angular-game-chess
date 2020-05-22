@@ -1,7 +1,7 @@
 <div class="board">
   <ng-container>
     <div class="square-container" *ngFor="let i of sixtyFour">
-      <app-square *ngIf="xy(i) as position" [black]="isBlack(position)" (click)="handleSquareClick(position)">
+      <app-square *ngIf="position(i) as position" [black]="isBlackSquare(position)" (click)="handleSquare(position)">
 
         <div *ngIf="chessService.chessBlackRook1Position$|async as chessBlackRook1Position">
           <app-chess-black-rook *ngIf="position.x === chessBlackRook1Position.x && position.y === chessBlackRook1Position.y"></app-chess-black-rook>
