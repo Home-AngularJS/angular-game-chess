@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Position } from '../../core/model/position';
-import { ChessService } from '../../core/service/chess.service';
+import { Position } from '../../../core/model/position';
+import { ChessService } from '../../../core/service/chess.service';
 
 @Component({
   selector: 'app-board',
