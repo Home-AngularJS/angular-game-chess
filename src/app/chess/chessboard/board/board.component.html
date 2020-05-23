@@ -1,43 +1,39 @@
 <div class="board">
   <ng-container>
-    <div class="square-container" *ngFor="let pos of sixtyFour">
+    <div *ngFor="let pos of sixtyFour">
       <app-square *ngIf="position(pos) as position" [isBlackSquare]="isBlackSquare(position)" (click)="handleSquare(position)">
-        <!-- Chess Black -->
-        <div><app-chess-black-rook *ngIf="equalsPosition(position, chessService.chessBlackRook1Position$|async)" (click)="handleChess(position)"></app-chess-black-rook></div>
-        <div><app-chess-black-knight *ngIf="equalsPosition(position, chessService.chessBlackKnight1Position$|async)" (click)="handleChess(position)"></app-chess-black-knight></div>
-        <div><app-chess-black-bishop *ngIf="equalsPosition(position, chessService.chessBlackBishop1Position$|async)" (click)="handleChess(position)"></app-chess-black-bishop></div>
-        <div><app-chess-black-queen *ngIf="equalsPosition(position, chessService.chessBlackQueenPosition$|async)" (click)="handleChess(position)"></app-chess-black-queen></div>
-        <div><app-chess-black-king *ngIf="equalsPosition(position, chessService.chessBlackKingPosition$|async)" (click)="handleChess(position)"></app-chess-black-king></div>
-        <div><app-chess-black-bishop *ngIf="equalsPosition(position, chessService.chessBlackBishop2Position$|async)" (click)="handleChess(position)"></app-chess-black-bishop></div>
-        <div><app-chess-black-knight *ngIf="equalsPosition(position, chessService.chessBlackKnight2Position$|async)" (click)="handleChess(position)"></app-chess-black-knight></div>
-        <div><app-chess-black-rook *ngIf="equalsPosition(position, chessService.chessBlackRook2Position$|async)" (click)="handleChess(position)"></app-chess-black-rook></div>
-        <div><app-chess-black-pawn *ngIf="equalsPosition(position, chessService.chessBlackPawn1Position$|async)" (click)="handleChess(position)"></app-chess-black-pawn></div>
-        <div><app-chess-black-pawn *ngIf="equalsPosition(position, chessService.chessBlackPawn2Position$|async)" (click)="handleChess(position)"></app-chess-black-pawn></div>
-        <div><app-chess-black-pawn *ngIf="equalsPosition(position, chessService.chessBlackPawn3Position$|async)" (click)="handleChess(position)"></app-chess-black-pawn></div>
-        <div><app-chess-black-pawn *ngIf="equalsPosition(position, chessService.chessBlackPawn4Position$|async)" (click)="handleChess(position)"></app-chess-black-pawn></div>
-        <div><app-chess-black-pawn *ngIf="equalsPosition(position, chessService.chessBlackPawn5Position$|async)" (click)="handleChess(position)"></app-chess-black-pawn></div>
-        <div><app-chess-black-pawn *ngIf="equalsPosition(position, chessService.chessBlackPawn6Position$|async)" (click)="handleChess(position)"></app-chess-black-pawn></div>
-        <div><app-chess-black-pawn *ngIf="equalsPosition(position, chessService.chessBlackPawn7Position$|async)" (click)="handleChess(position)"></app-chess-black-pawn></div>
-        <div><app-chess-black-pawn *ngIf="equalsPosition(position, chessService.chessBlackPawn8Position$|async)" (click)="handleChess(position)"></app-chess-black-pawn></div>
-        <!-- /Chess Black -->
-        <!-- Chess White -->
-        <div><app-chess-white-pawn *ngIf="equalsPosition(position, chessService.chessWhitePawn1Position$|async)" (click)="handleChess(position)"></app-chess-white-pawn></div>
-        <div><app-chess-white-pawn *ngIf="equalsPosition(position, chessService.chessWhitePawn2Position$|async)" (click)="handleChess(position)"></app-chess-white-pawn></div>
-        <div><app-chess-white-pawn *ngIf="equalsPosition(position, chessService.chessWhitePawn3Position$|async)" (click)="handleChess(position)"></app-chess-white-pawn></div>
-        <div><app-chess-white-pawn *ngIf="equalsPosition(position, chessService.chessWhitePawn4Position$|async)" (click)="handleChess(position)"></app-chess-white-pawn></div>
-        <div><app-chess-white-pawn *ngIf="equalsPosition(position, chessService.chessWhitePawn5Position$|async)" (click)="handleChess(position)"></app-chess-white-pawn></div>
-        <div><app-chess-white-pawn *ngIf="equalsPosition(position, chessService.chessWhitePawn6Position$|async)" (click)="handleChess(position)"></app-chess-white-pawn></div>
-        <div><app-chess-white-pawn *ngIf="equalsPosition(position, chessService.chessWhitePawn7Position$|async)" (click)="handleChess(position)"></app-chess-white-pawn></div>
-        <div><app-chess-white-pawn *ngIf="equalsPosition(position, chessService.chessWhitePawn8Position$|async)" (click)="handleChess(position)"></app-chess-white-pawn></div>
-        <div><app-chess-white-rook *ngIf="equalsPosition(position, chessService.chessWhiteRook1Position$|async)" (click)="handleChess(position)"></app-chess-white-rook></div>
-        <div><app-chess-white-knight *ngIf="equalsPosition(position, chessService.chessWhiteKnight1Position$|async)" (click)="handleChess(position)"></app-chess-white-knight></div>
-        <div><app-chess-white-bishop *ngIf="equalsPosition(position, chessService.chessWhiteBishop1Position$|async)" (click)="handleChess(position)"></app-chess-white-bishop></div>
-        <div><app-chess-white-queen *ngIf="equalsPosition(position, chessService.chessWhiteQueenPosition$|async)" (click)="handleChess(position)"></app-chess-white-queen></div>
-        <div><app-chess-white-king *ngIf="equalsPosition(position, chessService.chessWhiteKingPosition$|async)" (click)="handleChess(position)"></app-chess-white-king></div>
-        <div><app-chess-white-bishop *ngIf="equalsPosition(position, chessService.chessWhiteBishop2Position$|async)" (click)="handleChess(position)"></app-chess-white-bishop></div>
-        <div><app-chess-white-knight *ngIf="equalsPosition(position, chessService.chessWhiteKnight2Position$|async)" (click)="handleChess(position)"></app-chess-white-knight></div>
-        <div><app-chess-white-rook *ngIf="equalsPosition(position, chessService.chessWhiteRook2Position$|async)" (click)="handleChess(position)"></app-chess-white-rook></div>
-        <!-- /Chess White -->
+        <div> <app-chess-black-rook *ngIf="equalsPosition(position, chessService.chessBlackRook1Position$|async)" (click)="handleChess(position)"></app-chess-black-rook> </div>
+        <div> <app-chess-black-knight *ngIf="equalsPosition(position, chessService.chessBlackKnight1Position$|async)" (click)="handleChess(position)"></app-chess-black-knight> </div>
+        <div> <app-chess-black-bishop *ngIf="equalsPosition(position, chessService.chessBlackBishop1Position$|async)" (click)="handleChess(position)"></app-chess-black-bishop> </div>
+        <div> <app-chess-black-queen *ngIf="equalsPosition(position, chessService.chessBlackQueenPosition$|async)" (click)="handleChess(position)"></app-chess-black-queen> </div>
+        <div> <app-chess-black-king *ngIf="equalsPosition(position, chessService.chessBlackKingPosition$|async)" (click)="handleChess(position)"></app-chess-black-king> </div>
+        <div> <app-chess-black-bishop *ngIf="equalsPosition(position, chessService.chessBlackBishop2Position$|async)" (click)="handleChess(position)"></app-chess-black-bishop> </div>
+        <div> <app-chess-black-knight *ngIf="equalsPosition(position, chessService.chessBlackKnight2Position$|async)" (click)="handleChess(position)"></app-chess-black-knight> </div>
+        <div> <app-chess-black-rook *ngIf="equalsPosition(position, chessService.chessBlackRook2Position$|async)" (click)="handleChess(position)"></app-chess-black-rook> </div>
+        <div> <app-chess-black-pawn *ngIf="equalsPosition(position, chessService.chessBlackPawn1Position$|async)" (click)="handleChess(position)"></app-chess-black-pawn> </div>
+        <div> <app-chess-black-pawn *ngIf="equalsPosition(position, chessService.chessBlackPawn2Position$|async)" (click)="handleChess(position)"></app-chess-black-pawn> </div>
+        <div> <app-chess-black-pawn *ngIf="equalsPosition(position, chessService.chessBlackPawn3Position$|async)" (click)="handleChess(position)"></app-chess-black-pawn> </div>
+        <div> <app-chess-black-pawn *ngIf="equalsPosition(position, chessService.chessBlackPawn4Position$|async)" (click)="handleChess(position)"></app-chess-black-pawn> </div>
+        <div> <app-chess-black-pawn *ngIf="equalsPosition(position, chessService.chessBlackPawn5Position$|async)" (click)="handleChess(position)"></app-chess-black-pawn> </div>
+        <div> <app-chess-black-pawn *ngIf="equalsPosition(position, chessService.chessBlackPawn6Position$|async)" (click)="handleChess(position)"></app-chess-black-pawn> </div>
+        <div> <app-chess-black-pawn *ngIf="equalsPosition(position, chessService.chessBlackPawn7Position$|async)" (click)="handleChess(position)"></app-chess-black-pawn> </div>
+        <div> <app-chess-black-pawn *ngIf="equalsPosition(position, chessService.chessBlackPawn8Position$|async)" (click)="handleChess(position)"></app-chess-black-pawn> </div>
+        <div> <app-chess-white-pawn *ngIf="equalsPosition(position, chessService.chessWhitePawn1Position$|async)" (click)="handleChess(position)"></app-chess-white-pawn> </div>
+        <div> <app-chess-white-pawn *ngIf="equalsPosition(position, chessService.chessWhitePawn2Position$|async)" (click)="handleChess(position)"></app-chess-white-pawn> </div>
+        <div> <app-chess-white-pawn *ngIf="equalsPosition(position, chessService.chessWhitePawn3Position$|async)" (click)="handleChess(position)"></app-chess-white-pawn> </div>
+        <div> <app-chess-white-pawn *ngIf="equalsPosition(position, chessService.chessWhitePawn4Position$|async)" (click)="handleChess(position)"></app-chess-white-pawn> </div>
+        <div> <app-chess-white-pawn *ngIf="equalsPosition(position, chessService.chessWhitePawn5Position$|async)" (click)="handleChess(position)"></app-chess-white-pawn> </div>
+        <div> <app-chess-white-pawn *ngIf="equalsPosition(position, chessService.chessWhitePawn6Position$|async)" (click)="handleChess(position)"></app-chess-white-pawn> </div>
+        <div> <app-chess-white-pawn *ngIf="equalsPosition(position, chessService.chessWhitePawn7Position$|async)" (click)="handleChess(position)"></app-chess-white-pawn> </div>
+        <div> <app-chess-white-pawn *ngIf="equalsPosition(position, chessService.chessWhitePawn8Position$|async)" (click)="handleChess(position)"></app-chess-white-pawn> </div>
+        <div> <app-chess-white-rook *ngIf="equalsPosition(position, chessService.chessWhiteRook1Position$|async)" (click)="handleChess(position)"></app-chess-white-rook> </div>
+        <div> <app-chess-white-knight *ngIf="equalsPosition(position, chessService.chessWhiteKnight1Position$|async)" (click)="handleChess(position)"></app-chess-white-knight> </div>
+        <div> <app-chess-white-bishop *ngIf="equalsPosition(position, chessService.chessWhiteBishop1Position$|async)" (click)="handleChess(position)"></app-chess-white-bishop> </div>
+        <div> <app-chess-white-queen *ngIf="equalsPosition(position, chessService.chessWhiteQueenPosition$|async)" (click)="handleChess(position)"></app-chess-white-queen> </div>
+        <div> <app-chess-white-king *ngIf="equalsPosition(position, chessService.chessWhiteKingPosition$|async)" (click)="handleChess(position)"></app-chess-white-king> </div>
+        <div> <app-chess-white-bishop *ngIf="equalsPosition(position, chessService.chessWhiteBishop2Position$|async)" (click)="handleChess(position)"></app-chess-white-bishop> </div>
+        <div> <app-chess-white-knight *ngIf="equalsPosition(position, chessService.chessWhiteKnight2Position$|async)" (click)="handleChess(position)"></app-chess-white-knight> </div>
+        <div> <app-chess-white-rook *ngIf="equalsPosition(position, chessService.chessWhiteRook2Position$|async)" (click)="handleChess(position)"></app-chess-white-rook> </div>
       </app-square>
     </div>
   </ng-container>
