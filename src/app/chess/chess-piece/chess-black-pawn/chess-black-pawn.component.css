@@ -1,7 +1,16 @@
-span {
+a {
   font-weight: 400;
   font-size: 54px;
   line-height: 70px;
+  opacity: 0.75;
+}
+
+a:hover {
+  cursor: move;
+}
+
+a:active, a:focus {
+  opacity: 1.0;
 }
 
 .dragging {
