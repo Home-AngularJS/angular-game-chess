@@ -68,7 +68,7 @@ export class BoardComponent implements OnInit {
     if (this.chessService.isChessWhiteBishop2Position) this.chessService.moveChessWhiteBishop2(position)
     if (this.chessService.isChessWhiteKnight2Position) this.chessService.moveChessWhiteKnight2(position)
     if (this.chessService.isChessWhiteRook2Position) this.chessService.moveChessWhiteRook2(position)
-    this.chessService.downChessStep()
+    this.chessService.minusMoveChessStep()
   }
 
   handleChess(position: Position) {
@@ -104,6 +104,6 @@ export class BoardComponent implements OnInit {
     this.chessService.isChessWhiteKnight2Position = this.equalsPosition(position, this.chessService.chessWhiteKnight2Position$.value)
     this.chessService.isChessWhiteRook1Position = this.equalsPosition(position, this.chessService.chessWhiteRook1Position$.value)
     this.chessService.isChessWhiteRook2Position = this.equalsPosition(position, this.chessService.chessWhiteRook2Position$.value)
-    this.chessService.upChessStep()
+    this.chessService.plusMoveChessStep()
   }
 }

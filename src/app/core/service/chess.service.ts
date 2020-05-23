@@ -68,173 +68,173 @@ export class ChessService {
   isChessWhiteKnight2Position = false
   isChessWhiteRook1Position = false
   isChessWhiteRook2Position = false
-  chessStep = 0
+  limitChessOneStep = 0
 
-  upChessStep() {
-    this.chessStep++
+  plusMoveChessStep() {
+    this.limitChessOneStep++
   }
 
-  downChessStep() {
-    if (0 < this.chessStep) this.chessStep--
+  minusMoveChessStep() {
+    if (0 < this.limitChessOneStep) this.limitChessOneStep--
   }
 
   moveChessBlackKing(to: Position) {
     this.chessBlackKingPosition$.next(to)
-    if (0 == this.chessStep) this.isChessBlackKingPosition = false
+    if (0 == this.limitChessOneStep) this.isChessBlackKingPosition = false
   }
 
   moveChessBlackQueen(to: Position) {
     this.chessBlackQueenPosition$.next(to)
-    if (0 == this.chessStep) this.isChessBlackQueenPosition = false
+    if (0 == this.limitChessOneStep) this.isChessBlackQueenPosition = false
   }
 
   moveChessBlackBishop1(to: Position) {
     this.chessBlackBishop1Position$.next(to)
-    if (0 == this.chessStep) this.isChessBlackBishop1Position = false
+    if (0 == this.limitChessOneStep) this.isChessBlackBishop1Position = false
   }
 
   moveChessBlackBishop2(to: Position) {
     this.chessBlackBishop2Position$.next(to)
-    if (0 == this.chessStep) this.isChessBlackBishop2Position = false
+    if (0 == this.limitChessOneStep) this.isChessBlackBishop2Position = false
   }
 
   moveChessBlackKnight1(to: Position) {
     this.chessBlackKnight1Position$.next(to)
-    if (0 == this.chessStep) this.isChessBlackKnight1Position = false
+    if (0 == this.limitChessOneStep) this.isChessBlackKnight1Position = false
   }
 
   moveChessBlackKnight2(to: Position) {
     this.chessBlackKnight2Position$.next(to)
-    if (0 == this.chessStep) this.isChessBlackKnight2Position = false
+    if (0 == this.limitChessOneStep) this.isChessBlackKnight2Position = false
   }
 
   moveChessBlackRook1(to: Position) {
     this.chessBlackRook1Position$.next(to)
-    if (0 == this.chessStep) this.isChessBlackRook1Position = false
+    if (0 == this.limitChessOneStep) this.isChessBlackRook1Position = false
   }
 
   moveChessBlackRook2(to: Position) {
     this.chessBlackRook2Position$.next(to)
-    if (0 == this.chessStep) this.isChessBlackRook2Position = false
+    if (0 == this.limitChessOneStep) this.isChessBlackRook2Position = false
   }
 
   moveChessBlackPawn1(to: Position) {
     this.chessBlackPawn1Position$.next(to)
-    if (0 == this.chessStep) this.isChessBlackPawn1Position = false
+    if (0 == this.limitChessOneStep) this.isChessBlackPawn1Position = false
   }
 
   moveChessBlackPawn2(to: Position) {
     this.chessBlackPawn2Position$.next(to)
-    if (0 == this.chessStep) this.isChessBlackPawn2Position = false
+    if (0 == this.limitChessOneStep) this.isChessBlackPawn2Position = false
   }
 
   moveChessBlackPawn3(to: Position) {
     this.chessBlackPawn3Position$.next(to)
-    if (0 == this.chessStep) this.isChessBlackPawn3Position = false
+    if (0 == this.limitChessOneStep) this.isChessBlackPawn3Position = false
   }
 
   moveChessBlackPawn4(to: Position) {
     this.chessBlackPawn4Position$.next(to)
-    if (0 == this.chessStep) this.isChessBlackPawn4Position = false
+    if (0 == this.limitChessOneStep) this.isChessBlackPawn4Position = false
   }
 
   moveChessBlackPawn5(to: Position) {
     this.chessBlackPawn5Position$.next(to)
-    if (0 == this.chessStep) this.isChessBlackPawn5Position = false
+    if (0 == this.limitChessOneStep) this.isChessBlackPawn5Position = false
   }
 
   moveChessBlackPawn6(to: Position) {
     this.chessBlackPawn6Position$.next(to)
-    if (0 == this.chessStep) this.isChessBlackPawn6Position = false
+    if (0 == this.limitChessOneStep) this.isChessBlackPawn6Position = false
   }
 
   moveChessBlackPawn7(to: Position) {
     this.chessBlackPawn7Position$.next(to)
-    if (0 == this.chessStep) this.isChessBlackPawn7Position = false
+    if (0 == this.limitChessOneStep) this.isChessBlackPawn7Position = false
   }
 
   moveChessBlackPawn8(to: Position) {
     this.chessBlackPawn8Position$.next(to)
-    if (0 == this.chessStep) this.isChessBlackPawn8Position = false
+    if (0 == this.limitChessOneStep) this.isChessBlackPawn8Position = false
   }
 
   moveChessWhitePawn1(to: Position) {
     this.chessWhitePawn1Position$.next(to)
-    if (0 == this.chessStep) this.isChessWhitePawn1Position = false
+    if (0 == this.limitChessOneStep) this.isChessWhitePawn1Position = false
   }
 
   moveChessWhitePawn2(to: Position) {
     this.chessWhitePawn2Position$.next(to)
-    if (0 == this.chessStep) this.isChessWhitePawn2Position = false
+    if (0 == this.limitChessOneStep) this.isChessWhitePawn2Position = false
   }
 
   moveChessWhitePawn3(to: Position) {
     this.chessWhitePawn3Position$.next(to)
-    if (0 == this.chessStep) this.isChessWhitePawn3Position = false
+    if (0 == this.limitChessOneStep) this.isChessWhitePawn3Position = false
   }
 
   moveChessWhitePawn4(to: Position) {
     this.chessWhitePawn4Position$.next(to)
-    if (0 == this.chessStep) this.isChessWhitePawn4Position = false
+    if (0 == this.limitChessOneStep) this.isChessWhitePawn4Position = false
   }
 
   moveChessWhitePawn5(to: Position) {
     this.chessWhitePawn5Position$.next(to)
-    if (0 == this.chessStep) this.isChessWhitePawn5Position = false
+    if (0 == this.limitChessOneStep) this.isChessWhitePawn5Position = false
   }
 
   moveChessWhitePawn6(to: Position) {
     this.chessWhitePawn6Position$.next(to)
-    if (0 == this.chessStep) this.isChessWhitePawn6Position = false
+    if (0 == this.limitChessOneStep) this.isChessWhitePawn6Position = false
   }
 
   moveChessWhitePawn7(to: Position) {
     this.chessWhitePawn7Position$.next(to)
-    if (0 == this.chessStep) this.isChessWhitePawn7Position = false
+    if (0 == this.limitChessOneStep) this.isChessWhitePawn7Position = false
   }
 
   moveChessWhitePawn8(to: Position) {
     this.chessWhitePawn8Position$.next(to)
-    if (0 == this.chessStep) this.isChessWhitePawn8Position = false
+    if (0 == this.limitChessOneStep) this.isChessWhitePawn8Position = false
   }
 
   moveChessWhiteKing(to: Position) {
     this.chessWhiteKingPosition$.next(to)
-    if (0 == this.chessStep) this.isChessWhiteKingPosition = false
+    if (0 == this.limitChessOneStep) this.isChessWhiteKingPosition = false
   }
 
   moveChessWhiteQueen(to: Position) {
     this.chessWhiteQueenPosition$.next(to)
-    if (0 == this.chessStep) this.isChessWhiteQueenPosition = false
+    if (0 == this.limitChessOneStep) this.isChessWhiteQueenPosition = false
   }
 
   moveChessWhiteBishop1(to: Position) {
     this.chessWhiteBishop1Position$.next(to)
-    if (0 == this.chessStep) this.isChessWhiteBishop1Position = false
+    if (0 == this.limitChessOneStep) this.isChessWhiteBishop1Position = false
   }
 
   moveChessWhiteBishop2(to: Position) {
     this.chessWhiteBishop2Position$.next(to)
-    if (0 == this.chessStep) this.isChessWhiteBishop2Position = false
+    if (0 == this.limitChessOneStep) this.isChessWhiteBishop2Position = false
   }
 
   moveChessWhiteKnight1(to: Position) {
     this.chessWhiteKnight1Position$.next(to)
-    if (0 == this.chessStep) this.isChessWhiteKnight1Position = false
+    if (0 == this.limitChessOneStep) this.isChessWhiteKnight1Position = false
   }
 
   moveChessWhiteKnight2(to: Position) {
     this.chessWhiteKnight2Position$.next(to)
-    if (0 == this.chessStep) this.isChessWhiteKnight2Position = false
+    if (0 == this.limitChessOneStep) this.isChessWhiteKnight2Position = false
   }
 
   moveChessWhiteRook1(to: Position) {
     this.chessWhiteRook1Position$.next(to)
-    if (0 == this.chessStep) this.isChessWhiteRook1Position = false
+    if (0 == this.limitChessOneStep) this.isChessWhiteRook1Position = false
   }
 
   moveChessWhiteRook2(to: Position) {
     this.chessWhiteRook2Position$.next(to)
-    if (0 == this.chessStep) this.isChessWhiteRook2Position = false
+    if (0 == this.limitChessOneStep) this.isChessWhiteRook2Position = false
   }
 }
