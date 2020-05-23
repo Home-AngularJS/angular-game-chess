@@ -16,7 +16,6 @@ export class BoardComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.chessService.setChessPositionFalse()
   }
 
   position(pos): Position {
