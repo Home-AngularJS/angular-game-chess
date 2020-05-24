@@ -38,7 +38,7 @@
 
 ## Development server
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.4
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.13
 
 Run `ng serve` for a dev local server.
 
