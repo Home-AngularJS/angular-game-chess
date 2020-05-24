@@ -32,6 +32,8 @@
     4. Knight (Конь) `♞`
     5. Rook (Ладья) `♜`
     6. Pawn (Пешка) `♟`
+* `annyang` (JavaScript speech recognition library) documentation https://github.com/TalAter/annyang
+  * `Tutorial`: https://medium.com/@tauhidcodeninja/integrate-speech-recognition-within-angular-component-299043bf9287
 
 ![example](example.jpg)
 
