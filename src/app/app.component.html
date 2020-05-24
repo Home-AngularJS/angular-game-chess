@@ -1,31 +1,34 @@
 <div *ngIf="voiceActiveSectionDisabled; else voicesection;">
-  <button type="button" (click)="startVoiceRecognition()">Record</button>
+  <button type="button" (click)="startVoiceRecognition()">To listen the chess move</button>
 </div>
-<ng-template #voicesection>
-  <ng-container
-    *ngIf="!voiceActiveSectionError; else failure">
-    <ng-container
-      *ngIf="voiceText; else start">
-      <span>{{voiceText}}</span>
-    </ng-container>
-    <ng-template #start>
-      <ng-container
-        *ngIf="voiceActiveSectionListening; else beginning">
-        <span>Listening...</span>
+<table>
+  <ng-template #voicesection>
+  <tr>
+    <td>
+      <button (click)="closeVoiceRecognition()">Stop</button>
+      <button (click)="startVoiceRecognition()">To listen the chess move</button>
+    </td>
+    <td>
+      <ng-container *ngIf="!voiceActiveSectionError; else failure">
+        <ng-container *ngIf="voiceText; else start">
+          <span style="color: #00FFFF;"> {{voiceText}} </span>
+        </ng-container>
+        <ng-template #start>
+          <ng-container *ngIf="voiceActiveSectionListening; else beginning">
+            <span style="color: #FFF000;">Listening...</span>
+          </ng-container>
+          <ng-template #beginning>
+            <span style="color: #0FFF00;">Start talking...</span>
+          </ng-template>
+        </ng-template>
       </ng-container>
-      <ng-template #beginning>
-        <span>Start talking...</span>
+      <ng-template #failure>
+        <span style="color: #FF0000;">Didn't catch that</span>
       </ng-template>
-    </ng-template>
-  </ng-container>
-  <ng-template #failure>
-    <span>Didn't catch that</span>
+    </td>
+  </tr>
   </ng-template>
-  <div>
-    <button (click)="closeVoiceRecognition()">Close</button>
-    <button (click)="startVoiceRecognition()">Restart</button>
-  </div>
-</ng-template>
+</table>
 
 <div class="container">
   <app-board></app-board>
